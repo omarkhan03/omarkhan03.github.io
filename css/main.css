@@ -1,0 +1,194 @@
+:root {
+  --clr-primary-200:#F3EED9;
+  --clr-primary-400: #643535;
+
+  --clr-neutral-100:#FFF;
+  --clr-neutral-900:#222C2A;
+
+  --ff-primary: 'Roboto', sans-serif;
+  --ff-accent: 'Roboto Serif', serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-primary);
+  font-weight: 400;
+  font-size: 1.3125rem;
+  line-height: 1.6;
+  padding-top: 2.5625rem;
+}
+
+@media (max-width: 30em) {
+  body {
+    font-size: 1rem
+  }
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  text-align: left;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--clr-primary-400);
+  font-family: var(--ff-accent);
+  font-weight: 500;
+  line-height: 1;
+
+}
+
+h2,
+h3,
+p {
+  margin-bottom: 1em;
+}
+
+a {
+  color: var(--clr-primary-400);
+}
+
+hr {
+  margin-top: 2rem; 
+  margin-bottom: 3rem;
+  background-color: var(--clr-primary-400);
+}
+
+.text-center {
+  text-align: center;
+}
+
+section {
+  padding: 4rem 0;
+}
+
+@media (min-width: 40em) {
+  section {
+    padding: 7rem 0;
+  }
+}
+
+.container {
+  margin-inline: auto;
+  width: min(90%, 70.5rem);
+}
+
+.split {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 40em) {
+  .split {
+    flex-direction: row;
+  }
+
+  .split > * {
+    flex-basis: 100%;
+  }
+
+  .split > * + * {
+    margin-left: 2em;
+  }
+}
+
+.container--rarrow {
+  max-width: 34rem;
+}
+
+.bg-light { 
+  background-color: var(--clr-primary-200);
+}
+
+.bg-primary { 
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-primary-400);
+}
+
+.bg-dark { 
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-neutral-900);
+}
+
+.bg-primary h2,
+.bg-dark h2 {
+  color: var(--clr-primary-200);
+}
+
+img {
+  display: block;
+  max-width: 50%;
+  margin-bottom: 2rem;
+}
+
+.profile-pic {
+  max-width: 25%;
+  border-radius: 35% 65% 36% 64% / 75% 58% 42% 25% ;
+  align-self: center;
+
+  border-color: var(--clr-primary-400);
+  border-style: solid;
+  border-width: 5px;
+
+  transition: border-radius 0.3s;
+}
+
+.profile-pic:hover {
+  border-radius: 44% 56% 54% 46% / 22% 42% 58% 78%  ;
+}
+
+@media (min-width: 40em) {
+  .profile-pic {
+      min-width: 14rem;
+  }
+}
+
+@media (max-width: 40em) {
+  .profile-pic {
+    max-width: 50%;
+  }
+  h2, p {
+    text-align: center; 
+  }
+}
+
+.extra-padding-bottom {
+  padding-bottom: 2rem;
+}
+
+.extra-padding-top {
+  padding-top: 2rem;
+}
+
+.low-margin {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.writing-title {
+  color: var(--clr-primary-200);
+}
+
+.writing-notes {
+  line-height: 1.5rem;
+  font-size: 0.8em;
+  padding-top: 1rem;
+  margin-bottom: -1rem;
+}
+
+.footer {
+  margin-top: 10rem;
+  font-size: 0.7em;
+  padding:0;
+  margin-bottom:-6rem;
+}
