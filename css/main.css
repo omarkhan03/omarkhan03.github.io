@@ -1,9 +1,9 @@
 :root {
-  --clr-primary-200:#F3EED9;
-  --clr-primary-400: #643535;
+  --clr-primary-200:#ededf1;
+  --clr-primary-400: #27252f;
 
   --clr-neutral-100:#FFF;
-  --clr-neutral-900:#222C2A;
+  --clr-neutral-900:#0c0f1d;
 
   --ff-primary: 'Roboto', sans-serif;
   --ff-accent: 'Roboto Serif', serif;
@@ -69,7 +69,7 @@ hr {
 }
 
 section {
-  padding: 4rem 0;
+  padding: 6rem 0;
 }
 
 @media (min-width: 40em) {
@@ -140,6 +140,8 @@ img {
   border-style: solid;
   border-width: 5px;
 
+  background-color: rgba(255,255,255,0);
+  background-image: url("https://www.transparenttextures.com/patterns/dark-mosaic.png");
   transition: border-radius 0.3s;
 }
 
