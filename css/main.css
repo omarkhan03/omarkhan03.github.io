@@ -143,6 +143,8 @@ img {
   background-color: rgba(255,255,255,0);
   background-image: url("https://www.transparenttextures.com/patterns/dark-mosaic.png");
   transition: border-radius 0.3s;
+
+  cursor: pointer;
 }
 
 .profile-pic:hover {
@@ -193,4 +195,7 @@ img {
   font-size: 0.7em;
   padding:0;
   margin-bottom:-6rem;
+  text-align: center;
+
+  
 }
