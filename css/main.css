@@ -1,5 +1,5 @@
 :root {
-  --clr-primary-200:#ededf1;
+  --clr-primary-200:#e7e7f0;
   --clr-primary-400: #27252f;
 
   --clr-neutral-100:#FFF;
@@ -52,6 +52,10 @@ h2,
 h3,
 p {
   margin-bottom: 1em;
+}
+
+p a {
+  font-weight: bold;
 }
 
 a {
@@ -136,10 +140,6 @@ img {
   border-radius: 35% 65% 36% 64% / 75% 58% 42% 25% ;
   align-self: center;
 
-  border-color: var(--clr-primary-400);
-  border-style: solid;
-  border-width: 5px;
-
   background-color: rgba(255,255,255,0);
   background-image: url("https://www.transparenttextures.com/patterns/dark-mosaic.png");
   transition: border-radius 0.3s;
@@ -199,3 +199,17 @@ img {
 
   
 }
+
+/*
+.spacer {
+  aspect-ratio: 960/300;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.layer1 {
+  background-image: url('./layered-waves-haikei\ \(3\).svg')
+}
+*/
