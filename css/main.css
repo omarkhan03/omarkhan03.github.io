@@ -180,7 +180,8 @@ img {
 }
 
 .writing-title {
-  color: var(--clr-primary-200);
+  font-size: 0.9em;
+  color: #b5b5ff;
 }
 
 .writing-notes {
@@ -200,16 +201,29 @@ img {
   
 }
 
-/*
+
 .spacer {
-  aspect-ratio: 960/300;
+  aspect-ratio: 1000/100;
   width: 100%;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-.layer1 {
-  background-image: url('./layered-waves-haikei\ \(3\).svg')
+@media (max-width: 40em) {
+  .spacer {
+    aspect-ratio: 1000/300;
+  }
 }
-*/
+
+.layer1 {
+  background-image: url('transition-steps.svg')
+}
+
+.layer2 {
+  background-image: url('stacked-steps-haikei\ \(3\).svg')
+}
+
+.layer3 {
+  background-image: url('transition-ducks.svg');
+}
