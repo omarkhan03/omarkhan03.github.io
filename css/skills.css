@@ -10,7 +10,7 @@
 }
 
 .skills-col {
-  background-color: var(--clr-primary-200);
+  background-color: /*var(--clr-neutral-100);*/ var(--clr-primary-200);
   color:var(--clr-primary-400);
   text-align: center;
   border-radius: 5px;

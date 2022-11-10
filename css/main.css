@@ -1,6 +1,6 @@
 :root {
-  --clr-primary-200:#e7e7f0;
-  --clr-primary-400: #27252f;
+  --clr-primary-200:#d3e1de;
+  --clr-primary-400: #001a44;
 
   --clr-neutral-100:#FFF;
   --clr-neutral-900:#0c0f1d;
@@ -45,13 +45,12 @@ h3 {
   font-family: var(--ff-accent);
   font-weight: 500;
   line-height: 1;
-
 }
 
 h2,
 h3,
 p {
-  margin-bottom: 1em;
+  margin-bottom: 0.7em;
 }
 
 p a {
@@ -85,6 +84,7 @@ section {
 .container {
   margin-inline: auto;
   width: min(90%, 70.5rem);
+  min-height: calc(100vh - 16rem)
 }
 
 .split {
@@ -124,6 +124,10 @@ section {
   background-color: var(--clr-neutral-900);
 }
 
+.bg-white {
+  background-color: var(--clr-neutral-100);
+}
+
 .bg-primary h2,
 .bg-dark h2 {
   color: var(--clr-primary-200);
@@ -136,7 +140,7 @@ img {
 }
 
 .profile-pic {
-  max-width: 25%;
+  max-width: 30%;
   border-radius: 35% 65% 36% 64% / 75% 58% 42% 25% ;
   align-self: center;
 
@@ -145,6 +149,18 @@ img {
   transition: border-radius 0.3s;
 
   cursor: pointer;
+
+  border-right-style: solid;
+  border-right-width: 5px;
+  border-right-color: var(--clr-primary-400);
+
+  border-left-style: solid;
+  border-left-width: 5px;
+  border-left-color: var(--clr-primary-400);
+
+  border-bottom-style: solid;
+  border-bottom-width: 10px;
+  border-bottom-color: var(--clr-primary-400);
 }
 
 .profile-pic:hover {
@@ -161,10 +177,21 @@ img {
   .profile-pic {
     max-width: 50%;
   }
-  h2, p {
+}
+
+@media (max-width: 60em) {
+  h2, p, .get-in-touch {
     text-align: center; 
   }
+  p, .get-in-touch {
+    font-size: medium;
+  }
+  .icons-small {
+    display: flex;
+    justify-content: center;
+  }
 }
+
 
 .extra-padding-bottom {
   padding-bottom: 2rem;
@@ -197,8 +224,6 @@ img {
   padding:0;
   margin-bottom:-6rem;
   text-align: center;
-
-  
 }
 
 
@@ -212,7 +237,7 @@ img {
 
 @media (max-width: 40em) {
   .spacer {
-    aspect-ratio: 1000/300;
+    aspect-ratio: 1000/150;
   }
 }
 
@@ -226,4 +251,73 @@ img {
 
 .layer3 {
   background-image: url('transition-ducks.svg');
+}
+
+.layer4 {
+  background-image: url('transition-ducks\ \(1\).svg');
+  transform: translateY(-100%);
+  z-index: 10000;
+  position: absolute;
+}
+
+.layer5 {
+  background-image: url('layered-waves-haikei\ \(6\).svg');
+}
+
+.icon {
+  width: 5rem;
+  margin-bottom: 1.5rem;
+}
+
+.icons {
+  display: flex;
+  margin-left: -30vw;
+}
+
+@media (min-width: 100em) {
+  .icons {
+    margin-left: -20vw;
+  }
+}
+
+@media (min-width: 150em) {
+  .icons {
+    margin-left: -10vw;
+  }
+}
+
+.me {
+  display: flex;
+}
+
+@media (max-width: 60em) {
+  .icon {
+    width: 4rem;
+  }
+  .icons {
+    justify-content: center;
+    margin-left: 7vw;
+  }
+  .me {
+    display: block;
+  }
+}
+
+.icon-small {
+  width: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.icons-small {
+  display: flex;
+}
+
+.icons-small small {
+  padding-top: 0.2rem;
+}
+
+.me h2 {
+  width: 100%;
+  margin-right: 3rem;
+  margin-top: 0.5rem;
 }

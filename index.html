@@ -16,11 +16,10 @@
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/projects.css">
   <link rel="stylesheet" href="css/skills.css">
+  <link rel="stylesheet" href="css/parallax.css">
 </head>
 
 <body>
-  <div></div>
-
   <header class="header-row">
 
     <a href="#ABOUT ME" class="header-option">About Me</a>
@@ -29,373 +28,467 @@
     <a href="#WRITING" class="header-option">Writing</a>
 
   </header>
+  <main>
+    
+  
+    <section id="ABOUT ME" class="bg-light text-center no-parallax">
+      <div class="container container--narrow">
+        <div id="ABOUT ME" class="container">
+          <div class="split">
+            <img class="profile-pic" src="images/pond.jpg" alt="Picture of me">
+  
+            <div class="about-me-content">
+              <div class="me">
+                <h2>Omar Khan</h2>
+                <div class="icons"><a href="https://github.com/omarkhan03" target="_blank">
+                  <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="icon">
+                </a>
+                <a href="https://www.linkedin.com/in/omar-khan-cs/" target="_blank">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/LinkedIn_icon_circle.svg/2048px-LinkedIn_icon_circle.svg.png" alt="Linkedin" class="icon">
+                </a>
+                <a href="Resume.pdf" target="_blank">
+                  <img src="https://cdn-icons-png.flaticon.com/512/6614/6614677.png" alt="Resume" class="icon">
+                </a></div>
+              </div>
 
-  <section id="ABOUT ME" class="bg-light text-center">
-    <div class="container container--narrow">
+              
+              <p> &nbsp &#8226 Computer Science student driven by a love of learning and creating.</p>
+              <p> &nbsp &#8226 Practicing web development and Unity in my free time.</p>
+              <p> &nbsp &#8226 Always looking to collaborate with others.</p>
 
-      <div id="ABOUT ME" class="container">
+
+              <div class="get-in-touch">
+                <p><small> Get in touch:</small> </p>
+                <div class="icons-small">
+                  <img src="https://cdn-icons-png.flaticon.com/512/5968/5968534.png" alt="email" class="icon-small">
+                  <small>&nbsp &nbsp oakhan03@gmail.com</small>
+                </div>
+                <div class="icons-small">
+                  <img src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/625e5fcef7ab80b8c1fe559e_Discord-Logo-Color.png" alt="discord" class="icon-small">
+                  <small>&nbsp &nbsp Duppy#1861</small>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="spacer layer4"></div>
+    
+  <section class="parallax bg">
+    <a href="https://github.com/omarkhan03/YYC_Drone_Simulator" target="_blank"></a>
+  </section>
+
+  
+  <div class="spacer layer5"></div>
+    <section id="PROJECTS" class="no-parallax bg-white">
+      <div class="container">
+        <h2 class="text-center extra-padding-bottom">Projects</h2>
+  
         <div class="split">
-          <img class="profile-pic" src="images/transparent_profile.png" alt="Picture of me">
-
-          <div class="about-me-content">
-            <h2>Omar Khan</h2>
-            <p> &nbsp &#8226 Computer Science student driven by a <strong>love of learning</strong> and
-              <strong>creating</strong>.</p>
-            <p> &nbsp &#8226 Learning full stack software development and Unity in my free time.</p>
-            <p> &nbsp &#8226 Project experience in <strong>web</strong> and <strong>android</strong> development.</p>
-            <p>I strive to take advantage of every opportunity to improve and collaborate with others. Feel free to
-              follow me on
-              <a href="https://github.com/omarkhan03" target="_blank">GitHub</a>,
-              <a href="https://www.linkedin.com/in/omar-khan-cs/" target="_blank">LinkedIn</a>,
-              and view my <a href="Resume.pdf" target="_blank">resume.</a>
-              <br> <small>Email: oakhan03@gmail.com</small>
+          <div>
+            <p class="project-title">Calgary Drone Simulator</p>
+            <p class="project-body">A drone simulator set in an accurate model of downtown Calgary built using real-world 
+              satellite data. Includes a mini-game in which you collect coins from landmark locations. </p>
+            <p class="project-body">Skills used: <strong>Unity</strong>, <strong>C#</strong>, 
+              <strong>Game design</strong>, <strong>UI design</strong>
             </p>
+            <div class="project-button-container">
+              <a href="https://github.com/omarkhan03/YYC_Drone_Simulator" target="_blank">
+                <button class="project-button"> View code </button>
+              </a>
+              <a href="https://omarkhan03.itch.io/calgary-drone-simulator" target="_blank">
+                <button class="project-button"> Download game </button>
+              </a>
+            </div>
           </div>
+          <a class="project-thumbnail" href="https://github.com/omarkhan03/DiscoverElectronic" target="_blank">
+            <img class="project-image" src="images/CDS_Portfolio_Thumbnail.png"
+              alt="Thumbnail for Discover Electronic Android app">
+          </a>
+        </div>
+
+        <hr>
+
+        <div class="split">
+          <div>
+            <p class="project-title">Discover Electronic</p>
+            <p class="project-body">An android app I built to introduce users to electronic music and give them
+              recommendations tailored to their personal taste. </p>
+            <p class="project-body">Includes an album checklist as well as links to streaming services and more info for
+              each album.</p>
+            <p class="project-body">Skills used: <strong>Kotlin</strong>, <strong>Jetpack Compose</strong>, <strong>Data
+                structures</strong>, <strong>UI design</strong></p>
+            <div class="project-button-container">
+              <a href="https://github.com/omarkhan03/DiscoverElectronic" target="_blank">
+                <button class="project-button"> View code </button>
+              </a>
+              <a href="https://www.youtube.com/watch?v=GyXKZyK1fMQ" target="_blank">
+                <button class="project-button"> Demo video </button>
+              </a>
+              <a href="https://play.google.com/store/apps/details?id=com.duppy.discoverelectronic" target="_blank">
+                <button class="project-button"> Download app </button>
+              </a>
+            </div>
+          </div>
+          <iframe src="https://www.youtube.com/embed/GyXKZyK1fMQ"></iframe>
+          <!--
+            <a class="project-thumbnail" href="https://github.com/omarkhan03/DiscoverElectronic" target="_blank">
+            <img class="project-image" src="images/DE_Portfolio_Thumbnail (1).svg"
+              alt="Thumbnail for Discover Electronic Android app"> 
+          -->
+          </a>
+        </div>
+  
+        <hr>
+  
+        <div class="split">
+          <div>
+            <p class="project-title">Calgary Connect</p>
+            <p class="project-body"> A multi-platform app built to give tourists visiting downtown Calgary a list of
+              events and attractions near them.
+              Developed in a group of 9 people for <strong>YYC Hacks 2022</strong>, with the theme of downtown
+              revitalization. </p>
+            <p class="project-body"> Connected to the Calgary events <strong>API</strong>, and includes Google Maps
+              integration. </p>
+            <p class="project-body">Skills used: <strong>Kotlin</strong>, <strong>Jetpack Compose</strong>,
+              <strong>JSON</strong>, <strong>JavaScript</strong></p>
+            <p class="project-body">Web component:</p>
+            <div class="project-button-container">
+              <a href="https://github.com/omarkhan03/Calgary_Connect_Web" target="_blank">
+                <button class="project-button"> View code </button>
+              </a>
+            </div>
+            <p class="project-body">Android component:</p>
+            <div class="project-button-container">
+              <a href="https://github.com/omarkhan03/Calgary_Connect_Android" target="_blank">
+                <button class="project-button"> View code </button>
+              </a>
+              <a href="https://www.youtube.com/watch?v=5VoVWCICnoY" target="_blank">
+                <button class="project-button"> Demo video </button>
+              </a>
+            </div>
+          </div>
+          <iframe src="https://www.youtube.com/embed/5VoVWCICnoY"></iframe>
+          <!--
+            <a class="project-thumbnail" href="https://github.com/omarkhan03/Calgary_Connect_Android" target="_blank">
+            <img class="project-image" src="images/CC_Portfolio_Thumbnail.svg" alt="Thumbnail for Calgary Connect">
+          </a>
+          -->
+        </div>
+  
+        <hr>
+  
+        <div class="split">
+          <div>
+            <p class="project-title">Prayer Pal</p>
+            <p class="project-body">A desktop app I developed that allows users to view the Islamic prayer times for their
+              location, using webscraping. </p>
+            <p class="project-body">Skills used: <strong>Python</strong>, Webscraping via <strong>BeautifulSoup4</strong>,
+              <strong>PySimpleGUI</strong></p>
+            <div class="project-button-container">
+              <a href="https://github.com/omarkhan03/PrayerPal" target="_blank">
+                <button class="project-button"> View code / Download app</button>
+              </a>
+              <a href="https://www.youtube.com/watch?v=vqCaVo29a4o" target="_blank">
+                <button class="project-button"> Demo video </button>
+              </a>
+            </div>
+          </div>
+          <iframe src="https://www.youtube.com/embed/vqCaVo29a4o" frameborder="0"></iframe>
+          <!--
+            <a class="project-thumbnail" href="https://github.com/omarkhan03/PrayerPal" target="_blank">
+            <img class="project-image" src="images/PP_Portfolio_Thumbnail.svg"
+              alt="Thumbnail for Discover Electronic Android app">
+          </a>
+          -->
+          
+  
+        </div>
+  
+        <hr>
+  
+        <div class="split">
+          <div>
+            <p class="project-title">2-Player Snake Game</p>
+            <p class="project-body">A web game I developed using JavaScript and CSS that adds a multiplayer twist to the
+              classic snake game. </p>
+            <p class="project-body">Skills used: <strong>JavaScript</strong>, <strong>CSS</strong>, <strong>HTML</strong>,
+              <strong>VSCode</strong> </p>
+            <div class="project-button-container">
+              <a href="https://omarkhan03.github.io/2P_snake_game/" target="_blank">
+                <button class="project-button">Play game</button>
+              </a>
+              <a href="https://github.com/omarkhan03/2P_Snake_Game" target="_blank">
+                <button class="project-button">View code</button>
+              </a>
+            </div>
+          </div>
+          <a class="project-thumbnail" href="https://github.com/omarkhan03/2P_Snake_Game" target="_blank">
+            <img class="project-image" src="images/SG_Portfolio_Thumbnail.svg" alt="Thumbnail for 2-Player Snake Game">
+          </a>
+  
+        </div>
+  
+  
+        <hr>
+  
+        <div class="split">
+          <div>
+            <p class="project-title">Nutrition Tracker</p>
+            <p class="project-body"> A desktop app I developed with a partner for a school project that tracks the user's
+              nutrient intake over time and provides calculated data. </p>
+            <p class="project-body">Skills used: <strong>Java</strong>, <strong>JavaFX</strong>, <strong>Data
+                structures</strong>, <strong>IntelliJ IDEA</strong></p>
+            <div class="project-button-container">
+              <a href="https://github.com/omarkhan03/NutritionTracker" target="_blank">
+                <button class="project-button"> View code </button>
+              </a>
+            </div>
+          </div>
+          <div>
+            <p class="project-title">Portfolio Website</p>
+            <p class="project-body"> I designed and built this responsive portfolio website myself, entirely from scratch
+              using HTML and CSS. </p>
+            <p class="project-body">Skills used: <strong>CSS</strong>, <strong>HTML</strong>
+              <strong>UI design</strong> </p>
+            <div class="project-button-container">
+              <a href="https://github.com/omarkhan03/Portfolio_Website" target="_blank">
+                <button class="project-button"> View code </button>
+              </a>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+  
+    </section>
+  
+    <div class="spacer layer2"></div>
+  
+    <section id="SKILLS" class="bg-dark">
+      <div class="container">
+        <div class="split">
+          <div>
+            <h2 class="text-center">Skills</h2>
+  
+            <p> <i>Languages:</i> </p>
+  
+            <div class="skills-grid">
+              <div class="skills-col">
+                <div class="skills-text">Java</div>
+                <div class="vl"></div>
+                <img class="skills-icon" src="images/java-logo-1.png" alt="">
+              </div>
+              <div class="skills-col">
+                <div class="skills-text">C#</div>
+                <div class="vl"></div>
+                <img class="skills-icon" src="images/c-sharp-800x800.png" alt="">
+              </div>
+              <div class="skills-col">
+                <div class="skills-text">Kotlin</div>
+                <div class="vl"></div>
+                <img class="skills-icon" src="images/Kotlin_Icon.svg.png" alt="">
+              </div>
+              <div class="skills-col">
+                <div class="skills-text">JavaScript</div>
+                <div class="vl"></div>
+                <img class="skills-icon" src="images/JavaScript-logo.png" alt="">
+              </div>
+              <div class="skills-col">
+                <div class="skills-text">Python</div>
+                <div class="vl"></div>
+                <img class="skills-icon" src="images/2048px-Python-logo-notext.svg.png" alt="">
+              </div>
+              <div class="skills-col">
+                <div class="skills-text">C</div>
+                <div class="vl"></div>
+                <img class="skills-icon" src="images/c.png" alt="">
+              </div>
+              <div class="skills-col">
+                <div class="skills-text">ARM64 assembly</div>
+                <div class="vl"></div>
+                <img class="skills-icon" src="images/asm.png" alt="">
+              </div>
+              <div class="skills-col">
+                <div class="skills-text">CSS</div>
+                <div class="vl"></div>
+                <img class="skills-icon" src="images/CSS3_logo.svg.png" alt="">
+              </div>
+              <div class="skills-col">
+                <div class="skills-text">HTML</div>
+                <div class="vl"></div>
+                <img class="skills-icon" src="images/HTML5_Badge_512.png" alt="">
+              </div>
+            </div>
+  
+            <p> <i>Frameworks, libraries and tools:</i> </p>
+  
+
+              
+
+            <div class="skills-grid">
+              <div class="skills-col">
+                <div class="skills-text">Unity</div>
+                <div class="vl"></div>
+                <img class="skills-icon" src="images/Unity-Emblem.png">
+              </div>
+              <div class="skills-col">
+                <div class="skills-text">Jetpack Compose</div>
+                <div class="vl"></div>
+                <img class="skills-icon" src="images/jetpack-compose-icon_RGB.png" alt="">
+              </div>
+              <div class="skills-col">
+                <div class="skills-text">JavaFX</div>
+                <div class="vl"></div>
+                <img class="skills-icon" src="images/257a8be2-bbf2-4218-a55b-219d819578b2.png" alt="">
+              </div>
+              <div class="skills-col">
+                <div class="skills-text">PySimpleGUI</div>
+                <div class="vl"></div>
+                <img class="skills-icon" src="images/46163555.png" alt="">
+              </div>
+              <div class="skills-col">
+                <div class="skills-text">BeautifulSoup4</div>
+                <div class="vl"></div>
+                <img class="skills-icon" src="images/bs.png" alt="">
+              </div>
+              <div class="skills-col">
+                <div class="skills-text">JUnit</div>
+                <div class="vl"></div>
+                <img class="skills-icon" src="images/junit5-banner.png">
+              </div>
+            </div>
+  
+            <p> <i>IDE's:</i> </p>
+  
+            <div class="skills-grid">
+              <div class="skills-col">
+                <div class="skills-text">VSCode</div>
+                <div class="vl"></div>
+                <img class="skills-icon" src="images/file_type_vscode_icon_130084.png" alt="">
+              </div>
+              <div class="skills-col">
+                <div class="skills-text">Vim</div>
+                <div class="vl"></div>
+                <img class="skills-icon" src="images/vim.png" alt="">
+              </div>
+              <div class="skills-col">
+                <div class="skills-text">Android Studio</div>
+                <div class="vl"></div>
+                <img class="skills-icon" src="images/Android_Studio_Icon_3.6.svg.png" alt="">
+              </div>
+              <div class="skills-col">
+                <div class="skills-text">IntelliJ IDEA</div>
+                <div class="vl"></div>
+                <img class="skills-icon" src="images/IntelliJ_IDEA_Icon.svg.png">
+              </div>
+              <div class="skills-col">
+                <div class="skills-text">PyCharm</div>
+                <div class="vl"></div>
+                <img class="skills-icon" src="images/58481537cef1014c0b5e4968.png" alt="">
+              </div>
+            </div>
+  
+            <p> <i>Currently learning:</i> </p>
+            <div class="skills-grid">
+              <div class="skills-col">
+                <div class="skills-text">ReactJS</div>
+                <div class="vl"></div>
+                <img class="skills-icon" src="images/react-1-logo-png-transparent.png" alt="">
+              </div>
+              <!--
+                <div class="skills-col">
+                <div class="skills-text">NodeJS</div>
+                <div class="vl"></div>
+                <img class="skills-icon" src="images/nodejs-1-logo.png" alt="">
+              </div>
+              <div class="skills-col">
+                <div class="skills-text">MySQL</div>
+                <div class="vl"></div>
+                <img class="skills-icon" src="images/mysql-official.svg">
+              </div>
+              -->
+              
+            </div>
+  
+  
+            <p> <i>Courses and relevant knowledge:</i> </p>
+            <div class="split">
+              <div>
+                <p class="skills-bullets">&nbsp &#8226 Data Structures, Algorithms and their Analysis</p>
+                <p class="skills-bullets">&nbsp &#8226 Object-Oriented Design</p>
+                <p class="skills-bullets">&nbsp &#8226 Theoretical Foundations of Computer Science</p>
+                <p class="skills-bullets">&nbsp &#8226 Logic, Calculus, Linear Algebra</p>
+                
+              </div>
+
+              <div>
+                <p class="skills-bullets">&nbsp &#8226 Git and Github</p>
+                <p class="skills-bullets">&nbsp &#8226 Linux</p>
+                <p class="skills-bullets">&nbsp &#8226 Computing Machinery</p>
+              </div>
+            </div>
+            
+            
+  
+  
+          </div>
+  
+  
         </div>
       </div>
-    </div>
+    </section>
 
-  </section>
-
-  <div class="spacer layer1"></div>
-
-  <section id="PROJECTS">
-    <div class="container">
-      <h2 class="text-center extra-padding-bottom">Projects</h2>
-
-      <div class="split">
-        <div>
-          <p class="project-title">Discover Electronic</p>
-          <p class="project-body">An android app I built to introduce users to electronic music and give them
-            recommendations tailored to their personal taste. </p>
-          <p class="project-body">Includes an album checklist as well as links to streaming services and more info for
-            each album.</p>
-          <p class="project-body">Skills used: <strong>Kotlin</strong>, <strong>Jetpack Compose</strong>, <strong>Data
-              structures</strong>, <strong>UI design</strong></p>
-          <div class="project-button-container">
-            <a href="https://github.com/omarkhan03/DiscoverElectronic" target="_blank">
-              <button class="project-button"> View code </button>
-            </a>
-            <a href="https://www.youtube.com/watch?v=GyXKZyK1fMQ" target="_blank">
-              <button class="project-button"> Demo video </button>
-            </a>
-            <a href="https://play.google.com/store/apps/details?id=com.duppy.discoverelectronic" target="_blank">
-              <button class="project-button"> Download app </button>
-            </a>
-          </div>
-        </div>
-        <a class="project-thumbnail" href="https://github.com/omarkhan03/DiscoverElectronic" target="_blank">
-          <img class="project-image" src="images/DE_Portfolio_Thumbnail (1).svg"
-            alt="Thumbnail for Discover Electronic Android app">
+    <div class="spacer layer3"></div>
+    
+  
+    <section id="WRITING" class="bg-primary no-parallax">
+      <div class="container">
+  
+        <h2 class="text-center">Writing</h2>
+        <p>I am a creative thinker. My mind is always flowing with ideas of all sorts, and I find the best way to focus
+          and communicate them is through writing.</p>
+        <p>I am including this section in my portfolio as an opportunity for me to refine some of my ideas to be shared to
+          the public.</p>
+  
+        <hr class="low-margin">
+  
+        <a class="writing-title"
+          href="https://second-plywood-35d.notion.site/Creepypasta-We-tried-to-cure-my-sister-s-terminal-brain-cancer-with-spiritual-healing-and-it-worked-8d9a660529b2422f81ed74e0a74e8e26"
+          target="_blank">
+          (4/11/21) &nbsp CreepyPasta: &nbsp We tried to cure my sister’s terminal brain cancer with spiritual healing and
+          it worked (click to read)
         </a>
-
-      </div>
-
-      <hr>
-
-      <div class="split">
-        <div>
-          <p class="project-title">Calgary Connect</p>
-          <p class="project-body"> A multi-platform app built to give tourists visiting downtown Calgary a list of
-            events and attractions near them.
-            Developed in a group of 9 people for <strong>YYC Hacks 2022</strong>, with the theme of downtown
-            revitalization. </p>
-          <p class="project-body"> Connected to the Calgary events <strong>API</strong>, and includes Google Maps
-            integration. </p>
-          <p class="project-body">Skills used: <strong>Kotlin</strong>, <strong>Jetpack Compose</strong>,
-            <strong>JSON</strong>, <strong>JavaScript</strong></p>
-          <p class="project-body">Web component:</p>
-          <div class="project-button-container">
-            <a href="https://github.com/omarkhan03/Calgary_Connect_Web" target="_blank">
-              <button class="project-button"> View code </button>
-            </a>
-          </div>
-          <p class="project-body">Android component:</p>
-          <div class="project-button-container">
-            <a href="https://github.com/omarkhan03/Calgary_Connect_Android" target="_blank">
-              <button class="project-button"> View code </button>
-            </a>
-            <a href="https://www.youtube.com/watch?v=5VoVWCICnoY" target="_blank">
-              <button class="project-button"> Demo video </button>
-            </a>
-          </div>
+  
+        <p class="writing-notes">CreepyPastas are spooky stories written by amateur writers and spread across the
+          internet. I wrote this CreepyPasta in 2021. It is inspired by the danger of cults. 
+          <br> <br> 
+          After posting my story on Reddit, it caught the attention of a CreepyPasta
+          narrator, who translated the story to Spanish and posted a narration of it to his YouTube channel, where it
+          garnered over 48,000 views:
+          <br> <br>
+          <iframe width="300" height="200" src="https://www.youtube.com/embed/Re6_5yunbrE">
+          </iframe>
+        </p>
+  
+        <hr>
+  
+        <div class="split">
+          <div></div>
+          <div class="footer">Designed and developed by Omar Khan © 2022</div>
+          <div></div>
         </div>
-        <a class="project-thumbnail" href="https://github.com/omarkhan03/Calgary_Connect_Android" target="_blank">
-          <img class="project-image" src="images/CC_Portfolio_Thumbnail.svg" alt="Thumbnail for Calgary Connect">
-        </a>
-
+  
       </div>
+  
+  
+    </section>
+  </main>
 
-      <hr>
-
-      <div class="split">
-        <div>
-          <p class="project-title">Prayer Pal</p>
-          <p class="project-body">A desktop app I developed that allows users to view the Islamic prayer times for their
-            location, using webscraping. </p>
-          <p class="project-body">Skills used: <strong>Python</strong>, Webscraping via <strong>BeautifulSoup4</strong>,
-            <strong>PySimpleGUI</strong></p>
-          <div class="project-button-container">
-            <a href="https://github.com/omarkhan03/PrayerPal" target="_blank">
-              <button class="project-button"> View code / Download app</button>
-            </a>
-          </div>
-        </div>
-        <a class="project-thumbnail" href="https://github.com/omarkhan03/PrayerPal" target="_blank">
-          <img class="project-image" src="images/PP_Portfolio_Thumbnail.svg"
-            alt="Thumbnail for Discover Electronic Android app">
-        </a>
-
-      </div>
-
-      <hr>
-
-      <div class="split">
-        <div>
-          <p class="project-title">2-Player Snake Game</p>
-          <p class="project-body">A web game I developed using JavaScript and CSS that adds a multiplayer twist to the
-            classic snake game. </p>
-          <p class="project-body">Skills used: <strong>JavaScript</strong>, <strong>CSS</strong>, <strong>HTML</strong>,
-            <strong>VSCode</strong> </p>
-          <div class="project-button-container">
-            <a href="https://omarkhan03.github.io/2P_snake_game/" target="_blank">
-              <button class="project-button">Play game</button>
-            </a>
-            <a href="https://github.com/omarkhan03/2P_Snake_Game" target="_blank">
-              <button class="project-button">View code</button>
-            </a>
-          </div>
-        </div>
-        <a class="project-thumbnail" href="https://github.com/omarkhan03/2P_Snake_Game" target="_blank">
-          <img class="project-image" src="images/SG_Portfolio_Thumbnail.svg" alt="Thumbnail for 2-Player Snake Game">
-        </a>
-
-      </div>
-
-
-      <hr>
-
-      <div class="split">
-        <div>
-          <p class="project-title">Nutrition Tracker</p>
-          <p class="project-body"> A desktop app I developed with a partner for a school project that tracks the user's
-            nutrient intake over time and provides calculated data. </p>
-          <p class="project-body">Skills used: <strong>Java</strong>, <strong>JavaFX</strong>, <strong>Data
-              structures</strong>, <strong>IntelliJ IDEA</strong></p>
-          <div class="project-button-container">
-            <a href="https://github.com/omarkhan03/NutritionTracker" target="_blank">
-              <button class="project-button"> View code </button>
-            </a>
-          </div>
-        </div>
-        <div>
-          <p class="project-title">Portfolio Website</p>
-          <p class="project-body"> I designed and built this responsive portfolio website myself, entirely from scratch
-            using HTML and CSS. </p>
-          <p class="project-body">Skills used: <strong>CSS</strong>, <strong>HTML</strong>, <strong>VSCode</strong>,
-            <strong>UI design</strong> </p>
-          <div class="project-button-container">
-            <a href="https://github.com/omarkhan03/Portfolio_Website" target="_blank">
-              <button class="project-button"> View code </button>
-            </a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-  </section>
-
-  <div class="spacer layer2"></div>
-
-  <section id="SKILLS" class="bg-dark">
-    <div class="container">
-      <div class="split">
-        <div>
-          <h2 class="text-center">Skills</h2>
-
-          <p> <i>Languages:</i> </p>
-
-          <div class="skills-grid">
-            <div class="skills-col">
-              <div class="skills-text">Java</div>
-              <div class="vl"></div>
-              <img class="skills-icon" src="images/java-logo-1.png" alt="">
-            </div>
-            <div class="skills-col">
-              <div class="skills-text">Kotlin</div>
-              <div class="vl"></div>
-              <img class="skills-icon" src="images/Kotlin_Icon.svg.png" alt="">
-            </div>
-            <div class="skills-col">
-              <div class="skills-text">JavaScript</div>
-              <div class="vl"></div>
-              <img class="skills-icon" src="images/JavaScript-logo.png" alt="">
-            </div>
-            <div class="skills-col">
-              <div class="skills-text">Python</div>
-              <div class="vl"></div>
-              <img class="skills-icon" src="images/2048px-Python-logo-notext.svg.png" alt="">
-            </div>
-            <div class="skills-col">
-              <div class="skills-text">C#</div>
-              <div class="vl"></div>
-              <img class="skills-icon" src="images/c-sharp-800x800.png" alt="">
-            </div>
-            <div class="skills-col">
-              <div class="skills-text">CSS</div>
-              <div class="vl"></div>
-              <img class="skills-icon" src="images/CSS3_logo.svg.png" alt="">
-            </div>
-            <div class="skills-col">
-              <div class="skills-text">HTML</div>
-              <div class="vl"></div>
-              <img class="skills-icon" src="images/HTML5_Badge_512.png" alt="">
-            </div>
-          </div>
-
-          <p> <i>Frameworks, libraries and tools:</i> </p>
-
-          <div class="skills-grid">
-            <div class="skills-col">
-              <div class="skills-text">Jetpack Compose</div>
-              <div class="vl"></div>
-              <img class="skills-icon" src="images/jetpack-compose-icon_RGB.png" alt="">
-            </div>
-            <div class="skills-col">
-              <div class="skills-text">JavaFX</div>
-              <div class="vl"></div>
-              <img class="skills-icon" src="images/257a8be2-bbf2-4218-a55b-219d819578b2.png" alt="">
-            </div>
-            <div class="skills-col">
-              <div class="skills-text">PySimpleGUI</div>
-              <div class="vl"></div>
-              <img class="skills-icon" src="images/46163555.png" alt="">
-            </div>
-            <div class="skills-col">
-              <div class="skills-text">BeautifulSoup4</div>
-              <div class="vl"></div>
-              <img class="skills-icon" src="images/bs.png" alt="">
-            </div>
-            <div class="skills-col">
-              <div class="skills-text">JUnit</div>
-              <div class="vl"></div>
-              <img class="skills-icon" src="images/junit5-banner.png">
-            </div>
-          </div>
-
-          <p> <i>IDE's:</i> </p>
-
-          <div class="skills-grid">
-            <div class="skills-col">
-              <div class="skills-text">VSCode</div>
-              <div class="vl"></div>
-              <img class="skills-icon" src="images/file_type_vscode_icon_130084.png" alt="">
-            </div>
-            <div class="skills-col">
-              <div class="skills-text">Android Studio</div>
-              <div class="vl"></div>
-              <img class="skills-icon" src="images/Android_Studio_Icon_3.6.svg.png" alt="">
-            </div>
-            <div class="skills-col">
-              <div class="skills-text">IntelliJ IDEA</div>
-              <div class="vl"></div>
-              <img class="skills-icon" src="images/IntelliJ_IDEA_Icon.svg.png">
-            </div>
-            <div class="skills-col">
-              <div class="skills-text">PyCharm</div>
-              <div class="vl"></div>
-              <img class="skills-icon" src="images/58481537cef1014c0b5e4968.png" alt="">
-            </div>
-          </div>
-
-          <p> <i>Currently learning / on my radar:</i> </p>
-
-          <div class="skills-grid">
-            <div class="skills-col">
-              <div class="skills-text">Unity</div>
-              <div class="vl"></div>
-              <img class="skills-icon" src="images/Unity-Emblem.png">
-            </div>
-            <div class="skills-col">
-              <div class="skills-text">ReactJS</div>
-              <div class="vl"></div>
-              <img class="skills-icon" src="images/react-1-logo-png-transparent.png" alt="">
-            </div>
-            <div class="skills-col">
-              <div class="skills-text">NodeJS</div>
-              <div class="vl"></div>
-              <img class="skills-icon" src="images/nodejs-1-logo.png" alt="">
-            </div>
-            <div class="skills-col">
-              <div class="skills-text">MySQL</div>
-              <div class="vl"></div>
-              <img class="skills-icon" src="images/mysql-official.svg">
-            </div>
-          </div>
-
-
-          <p> <i>Courses and relevant knowledge:</i> </p>
-          <p class="skills-bullets">&nbsp &#8226 Data Structures, Algorithms and their Analysis</p>
-          <p class="skills-bullets">&nbsp &#8226 Object-Oriented Design</p>
-          <p class="skills-bullets">&nbsp &#8226 Theoretical Foundations of Computer Science</p>
-          <p class="skills-bullets">&nbsp &#8226 Logic, Calculus, Linear Algebra</p>
-          <p class="skills-bullets">&nbsp &#8226 Git and Github</p>
-          <p class="skills-bullets">&nbsp &#8226 Linux</p>
-
-
-        </div>
-
-
-      </div>
-    </div>
-  </section>
-
-  <div class="spacer layer3"></div>
-
-
-  <section id="WRITING" class="bg-primary">
-    <div class="container">
-
-      <h2 class="text-center">Writing</h2>
-      <p>I am a creative thinker. My mind is always flowing with ideas of all sorts, and I find the best way to focus
-        and communicate them is through writing.</p>
-      <p>I am including this section in my portfolio as an opportunity for me to refine some of my ideas to be shared to
-        the public.</p>
-
-      <hr class="low-margin">
-
-      <a class="writing-title"
-        href="https://second-plywood-35d.notion.site/Creepypasta-We-tried-to-cure-my-sister-s-terminal-brain-cancer-with-spiritual-healing-and-it-worked-8d9a660529b2422f81ed74e0a74e8e26"
-        target="_blank">
-        (4/11/21) &nbsp CreepyPasta: &nbsp We tried to cure my sister’s terminal brain cancer with spiritual healing and
-        it worked (click to read)
-      </a>
-
-      <p class="writing-notes">CreepyPastas are spooky stories written by amateur writers and spread across the
-        internet. I wrote this CreepyPasta in 2021. It is inspired by the danger of cults. 
-        <br> <br> 
-        After posting my story on Reddit, it caught the attention of a CreepyPasta
-        narrator, who translated the story to Spanish and posted a narration of it to his YouTube channel, where it
-        garnered over 48,000 views:
-        <br> <br>
-        <iframe width="300" height="200" src="https://www.youtube.com/embed/Re6_5yunbrE">
-        </iframe>
-      </p>
-
-      <hr>
-
-      <div class="split">
-        <div></div>
-        <div class="footer">Designed and developed by Omar Khan © 2022</div>
-        <div></div>
-      </div>
-
-    </div>
-
-
-  </section>
-
+  
+  
 </body>
 
 </html>
