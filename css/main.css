@@ -264,6 +264,17 @@ img {
   background-image: url('layered-waves-haikei\ \(6\).svg');
 }
 
+.layer6 {
+  background-image: url('water-ducks\ \(1\).svg');
+  transform: translateY(-100%);
+  z-index: 10000;
+  position: absolute;
+}
+
+.layer7 {
+  background-image: url('water-ducks\ \(4\).svg');
+}
+
 .icon {
   width: 5rem;
   margin-bottom: 1.5rem;
@@ -290,6 +301,11 @@ img {
   display: flex;
 }
 
+small {
+  color: var(--clr-primary-400);
+  font-weight: bold;
+}
+
 @media (max-width: 60em) {
   .icon {
     width: 4rem;
@@ -314,6 +330,8 @@ img {
 
 .icons-small small {
   padding-top: 0.2rem;
+  color: #0c0f1d;
+  font-weight: normal;
 }
 
 .me h2 {
