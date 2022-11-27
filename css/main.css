@@ -140,42 +140,20 @@ img {
 }
 
 .profile-pic {
-  max-width: 30%;
-  border-radius: 35% 65% 36% 64% / 75% 58% 42% 25% ;
   align-self: center;
-
-  background-color: rgba(255,255,255,0);
-  background-image: url("https://www.transparenttextures.com/patterns/dark-mosaic.png");
-  transition: border-radius 0.3s;
-
-  cursor: pointer;
-
-  border-right-style: solid;
-  border-right-width: 5px;
-  border-right-color: var(--clr-primary-400);
-
-  border-left-style: solid;
-  border-left-width: 5px;
-  border-left-color: var(--clr-primary-400);
-
-  border-bottom-style: solid;
-  border-bottom-width: 10px;
-  border-bottom-color: var(--clr-primary-400);
-}
-
-.profile-pic:hover {
-  border-radius: 44% 56% 54% 46% / 22% 42% 58% 78%  ;
 }
 
 @media (min-width: 40em) {
-  .profile-pic {
-      min-width: 14rem;
+  .profile-pic {  
+    max-width: 30%;
+    min-width: 14rem;
   }
 }
 
 @media (max-width: 40em) {
   .profile-pic {
-    max-width: 50%;
+    height: 200%;
+    width: 15rem;
   }
 }
 
@@ -338,4 +316,11 @@ small {
   width: 100%;
   margin-right: 3rem;
   margin-top: 0.5rem;
+}
+
+.profile-photo {
+  transform: 
+    scaleX(96%)
+    translateX(1.6%)
+    scaleY(97%)
 }
