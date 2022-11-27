@@ -77,3 +77,7 @@
   min-height: 100%;
   flex-shrink: 0;
 }
+
+.project-body a {
+  color: rgb(223, 59, 0)
+}
