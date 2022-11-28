@@ -21,12 +21,12 @@
 </head>
 
 <body>
-  <header class="header-row">
+  <header id="header" class="header-row">
 
-    <a href="#ABOUT ME" class="header-option">About Me</a>
-    <a href="#PROJECTS" class="header-option">Projects</a>
-    <a href="#SKILLS" class="header-option">Skills</a>
-    <a href="#WRITING" class="header-option">Writing</a>
+    <a id="about_button" class="header-option">About Me</a>
+    <a id="projects_button" class="header-option">Projects</a>
+    <a id="skills_button" class="header-option">Skills</a>
+    <a id="writing_button" class="header-option">Writing</a>
 
   </header>
   <main>
@@ -193,43 +193,15 @@
 
         <div class="split">
           <div>
-            <p class="project-title">Discover Electronic</p>
-            <p class="project-body">An android app I built to introduce users to electronic music and give them
-              recommendations tailored to their personal taste. </p>
-            <p class="project-body">Includes an album checklist as well as links to streaming services and more info for
-              each album.</p>
-            <p class="project-body">Skills used: <strong>Kotlin</strong>, <strong>Jetpack Compose</strong>, <strong>Data
-                structures</strong>, <strong>UI design</strong></p>
-            <div class="project-button-container">
-              <a href="https://github.com/omarkhan03/DiscoverElectronic" target="_blank">
-                <button class="project-button"> View code </button>
-              </a>
-              <a href="https://play.google.com/store/apps/details?id=com.duppy.discoverelectronic" target="_blank">
-                <button class="project-button"> Download app </button>
-              </a>
-              <a href="https://www.youtube.com/watch?v=GyXKZyK1fMQ" target="_blank">
-                <button class="project-button"> Demo video </button>
-              </a>
-            </div>
-          </div>
-          <iframe allow="fullscreen;" src="https://www.youtube.com/embed/GyXKZyK1fMQ"></iframe>
-
-
-        </div>
-  
-        <hr>
-  
-        <div class="split">
-          <div>
             <p class="project-title">Calgary Connect</p>
             <p class="project-body"> A multi-platform app built to give tourists visiting downtown Calgary a list of
               events and attractions near them.
               Developed in a group of 9 people for <a href="https://www.yychacks.ca/">YYC Hacks 2022</a>, with the theme of downtown
               revitalization. </p>
-            <p class="project-body"> Connected to the Calgary events <strong>API</strong>, and includes Google Maps
-              integration. </p>
+            <p class="project-body"> I focussed on the android component of the app, which is connected to the Calgary events API
+              and includes Google Maps integration. </p>
             <p class="project-body">Skills used: <strong>Kotlin</strong>, <strong>Jetpack Compose</strong>,
-              <strong>JSON</strong>, <strong>JavaScript</strong></p>
+              <strong>JSON</strong> </p>
             <div class="project-button-container">
               <a href="https://github.com/omarkhan03/Calgary_Connect_Web" target="_blank">
                 <button class="project-button"> View code (web) </button>
@@ -277,6 +249,34 @@
           -->
           
   
+        </div>
+
+        <hr>
+  
+        <div class="split">
+          <div>
+            <p class="project-title">Discover Electronic</p>
+            <p class="project-body">An android app I built to introduce users to electronic music and give them
+              recommendations tailored to their personal taste. </p>
+            <p class="project-body">Includes an album checklist as well as links to streaming services and more info for
+              each album.</p>
+            <p class="project-body">Skills used: <strong>Kotlin</strong>, <strong>Jetpack Compose</strong>, <strong>Data
+                structures</strong>, <strong>UI design</strong></p>
+            <div class="project-button-container">
+              <a href="https://github.com/omarkhan03/DiscoverElectronic" target="_blank">
+                <button class="project-button"> View code </button>
+              </a>
+              <a href="https://play.google.com/store/apps/details?id=com.duppy.discoverelectronic" target="_blank">
+                <button class="project-button"> Download app </button>
+              </a>
+              <a href="https://www.youtube.com/watch?v=GyXKZyK1fMQ" target="_blank">
+                <button class="project-button"> Demo video </button>
+              </a>
+            </div>
+          </div>
+          <iframe allow="fullscreen;" src="https://www.youtube.com/embed/GyXKZyK1fMQ"></iframe>
+
+
         </div>
   
         <hr>
@@ -328,8 +328,8 @@
           <div>
             <p class="project-title">Portfolio Website</p>
             <p class="project-body"> I designed and built this responsive portfolio website myself, entirely from scratch
-              using HTML and CSS. </p>
-            <p class="project-body">Skills used: <strong>CSS</strong>, <strong>HTML</strong>
+              using HTML, CSS and JavaScript. </p>
+            <p class="project-body">Skills used: <strong>CSS</strong>, <strong>HTML</strong>, <strong>JavaScript</strong>
               <strong>UI design</strong> </p>
             <div class="project-button-container">
               <a href="https://github.com/omarkhan03/Portfolio_Website" target="_blank">
@@ -661,7 +661,7 @@
   
     </section>
   </main>
-
+  <script src="scroll.js"></script>
   
   
 </body>

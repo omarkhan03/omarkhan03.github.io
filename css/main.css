@@ -111,7 +111,8 @@ section {
 }
 
 .bg-light { 
-  background-color: var(--clr-primary-200);
+  background: rgb(255,221,136);
+background: linear-gradient(153deg, rgba(255,221,136,1) 0%, rgba(211,225,222,1) 60%);
 }
 
 .bg-primary { 
