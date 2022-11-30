@@ -79,5 +79,6 @@
 }
 
 .project-body a {
-  color: rgb(223, 59, 0)
+  background-color: var(--color-1);
+  color: black;
 }
