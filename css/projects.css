@@ -104,3 +104,20 @@
 .project-body a {
   color: black;
 }
+
+.project-top-space {
+  padding-top: 8rem;
+}
+
+@media (min-width: 40em) {
+  .reverse {
+    flex-direction: row-reverse;
+  }
+  .reverse iframe {
+    margin-left: 0;
+    margin-right: 2.5rem;
+  }
+  .project-top-space {
+    padding-top: 13rem;
+  }
+}
