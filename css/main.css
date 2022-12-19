@@ -8,8 +8,8 @@
   --ff-primary: 'Roboto', sans-serif;
   --ff-accent: 'Roboto Serif', serif;
 
-  --color-1:rgb(113, 244, 165);
-  --color-2:rgb(170, 222, 249);
+  --color-1:#54ff98;
+  --color-2:#7bd3ff;
 }
 
 *,
@@ -162,10 +162,6 @@ img {
   padding-bottom: 2rem;
 }
 
-.extra-padding-top {
-  padding-top: 2rem;
-}
-
 .low-margin {
   margin-top: 3rem;
   margin-bottom: 1rem;
@@ -225,10 +221,13 @@ img {
   position: absolute;
 }
 
-.layer5 {
-  background-image: url('layered-waves-haikei\ \(6\).svg');
+.layer10 {
+  background-image: url('layered-waves-haikei\ \(7\).svg');
+  /*transform: translateY(100%);*/
+  z-index: 10000;
+  position: absolute;
+  padding-bottom: 2rem;
 }
-
 .layer6 {
   background-image: url('water-ducks\ \(1\).svg');
   transform: translateY(-100%);
@@ -239,6 +238,8 @@ img {
 .layer7 {
   background-image: url('water-ducks\ \(4\).svg');
 }
+
+
 
 .icon {
   width: 5rem;

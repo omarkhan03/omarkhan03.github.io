@@ -37,7 +37,6 @@
   font-size: 0.7em;
   padding: 0.6rem;
 
-  background-color: var(--clr-primary-200);
   color: var(--clr-primary-400);
   border-color: var(--clr-primary-400);
   border-radius: 0.5rem;
@@ -53,12 +52,36 @@
 }
 
 .project-title {
-  background-color: var(--clr-primary-200);
   font-size: 1.2em;
   border-width: 0 0 0.1em 0;
   border-color: var(--clr-primary-400);
   border-style: solid;
 }
+
+.bg-1 {
+  background-color: var(--color-1);
+}
+
+.ct-1 button{
+  background-color: var(--color-1);
+}
+
+.ct-1 button:hover {
+  color: var(--color-1)
+}
+
+.bg-2 {
+  background-color: var(--color-2);
+}
+
+.ct-2 button{
+  background-color: var(--color-2);
+}
+
+.ct-2 button:hover {
+  color: var(--color-2)
+}
+
 
 @media (min-width: 40em) {
   .project-title {
@@ -79,6 +102,5 @@
 }
 
 .project-body a {
-  background-color: var(--color-1);
   color: black;
 }
