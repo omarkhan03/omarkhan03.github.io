@@ -118,6 +118,7 @@
     margin-right: 2.5rem;
   }
   .project-top-space {
-    padding-top: 13rem;
+    padding-top: 50vh;
+    margin-bottom: -3vh;
   }
 }
