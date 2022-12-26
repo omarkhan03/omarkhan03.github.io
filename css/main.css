@@ -386,29 +386,17 @@ small p {
     scaleY(97%)
 }
 
-.loading {
-  
-  margin-top: -13rem;
-  margin-left: 5rem;
-  padding-bottom: 4rem;
-  
-  z-index: -300;
-  position: relative;
-}
-
-@media (max-width: 30em) {
-  .loading {
-  
-    margin-top: -13rem;
-    margin-left: 4rem;
-    padding-bottom: 4rem;
-    
-    z-index: -300;
-    position: relative;
-  }
-}
 
 .about-me-content p{
-  font-size:large;
+  font-size: large;
   font-family: var(--ff-primary);
+}
+
+@media (max-width: 40em) {
+  .about-me-content p{
+    font-size: small;
+  }
+  .welcome {
+    margin-bottom: 3vh;
+  }
 }
