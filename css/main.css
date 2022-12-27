@@ -302,6 +302,10 @@ img {
   margin-left: -30vw;
 }
 
+.icon {
+  margin-left: 25%;
+}
+
 @media (min-width: 100em) {
   .icons {
     margin-left: -20vw;
@@ -328,12 +332,13 @@ small p {
 }
 
 @media (max-width: 60em) {
-  .icon {
-    width: 4rem;
-  }
   .icons {
+    margin-right: 0;
+    margin-left: 0;
+    
+    display: flex;
+    align-items: center;
     justify-content: center;
-    margin-left: 7vw;
   }
   .me {
     display: block;
@@ -394,7 +399,7 @@ small p {
 
 @media (max-width: 40em) {
   .about-me-content p{
-    font-size: small;
+    font-size: medium;
   }
   .welcome {
     margin-bottom: 3vh;
