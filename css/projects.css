@@ -106,10 +106,10 @@
 }
 
 .project-top-space {
-  padding-top: 8rem;
+  padding-top: 40vw;
 }
 
-@media (min-width: 40em) {
+@media (min-width: 50em) {
   .reverse {
     flex-direction: row-reverse;
   }
@@ -118,7 +118,7 @@
     margin-right: 2.5rem;
   }
   .project-top-space {
-    padding-top: 50vh;
-    margin-bottom: -3vh;
+    padding-top: 30vw;
+
   }
 }
