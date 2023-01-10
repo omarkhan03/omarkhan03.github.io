@@ -20,12 +20,13 @@
   align-items: center;
   justify-content: center;
 
-  transition: 0.2s;
+  transition: 0.3s;
 }
 
 .skills-col:hover {
-  margin-top: -0.1rem;
-  margin-bottom: -0.1rem;
+  margin-top: -0.2rem;
+  background-color: var(--color-1);
+  cursor: pointer;
 }
 
 .skills-icon {
