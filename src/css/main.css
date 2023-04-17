@@ -36,6 +36,12 @@ main {
   }
 }
 
+.webgl {
+  position:relative;
+  z-index: 3000;
+  border: 1px solid white;
+}
+
 body,
 h1,
 h2,
