@@ -1,0 +1,354 @@
+:root {
+  --clr-primary-200: white;
+  --clr-primary-400: black;
+
+  --clr-neutral-100:#e1e8ff;
+  --clr-neutral-900:#171863;
+
+  --ff-primary: 'Roboto', sans-serif;
+  --ff-accent: 'Raleway';
+
+  --color-1:#abc1ef;
+  --color-2:#fad2b9;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  font-family: var(--ff-primary);
+  font-weight: 400;
+  line-height: 1.6;
+  padding-top: 2.5625rem;
+}
+
+main {
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 30em) {
+  body {
+    font-size: 1rem
+  }
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  text-align: left;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--clr-primary-400);
+  font-family: var(--ff-accent);
+  font-weight: 700;
+  line-height: 1;
+  font-size: 2rem;
+}
+
+h2,
+h3,
+p {
+  margin-bottom: 0.7em;
+}
+
+p {
+  font-size: 1rem;
+}
+
+p a {
+  color: darkblue
+}
+
+a {
+  color: var(--clr-primary-400);
+}
+
+hr {
+  margin-top: 2rem; 
+  margin-bottom: 3rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+section {
+  padding: 6rem 0;
+}
+
+@media (min-width: 40em) {
+  section {
+    padding: 7rem 0;
+  }
+}
+
+.container {
+  margin-inline: auto;
+  width: min(90%, 70.5rem);
+  min-height: calc(100vh - 16rem)
+}
+
+.split {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 50em) {
+  .split {
+    flex-direction: row;
+  }
+
+  .split > * {
+    flex-basis: 100%;
+  }
+
+  .split > * + * {
+    margin-left: 2em;
+  }
+}
+
+.container--rarrow {
+  max-width: 34rem;
+}
+
+.bg-light { 
+  background: linear-gradient(145deg, var(--color-1), var(--color-2))
+}
+
+.bg-primary { 
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-primary-400);
+}
+
+.bg-dark { 
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-neutral-900);
+}
+
+.bg-white {
+  background-color: var(--clr-neutral-100);
+}
+
+.bg-primary h2,
+.bg-dark h2 {
+  color: var(--clr-primary-200);
+}
+
+img {
+  display: block;
+  max-width: 50%;
+  margin-bottom: 2rem;
+}
+
+
+
+@media (max-width: 60em) {
+  h2, p, .get-in-touch {
+    text-align: center; 
+  }
+  p, .get-in-touch {
+    font-size: medium;
+  }
+  .icons-small {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+
+.extra-padding-bottom {
+  padding-bottom: 2rem;
+}
+
+.low-margin {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.writing-title {
+  font-size: 0.9em;
+  color: #b5b5ff;
+}
+
+.writing-notes {
+  line-height: 1.5rem;
+  font-size: 0.8em;
+  padding-top: 1rem;
+  margin-bottom: -1rem;
+}
+
+.footer {
+  margin-top: 10rem;
+  font-size: 0.7em;
+  padding:0;
+  margin-bottom:-6rem;
+  text-align: center;
+}
+
+
+.spacer {
+  aspect-ratio: 500/50;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.bigspacer {
+  aspect-ratio: 500/57;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media (max-width: 40em) {
+  .spacer {
+    aspect-ratio: 1000/150;
+  }
+}
+
+.layer3 {
+  background-image: url('./backgrounds/wave-haikei\ \(6\).svg');
+}
+
+.layer4 {
+  background-image: url('./backgrounds/wave-haikei\ \(5\).svg');
+  transform: translateY(-100%);
+  z-index: 10000;
+  position: absolute;
+}
+
+.desert {
+  background-image: url('./backgrounds/desert.svg');
+  transform: translateY(-100%);
+  z-index: 10000;
+  position: absolute;
+}
+
+.icon {
+  width: 5rem;
+  margin-bottom: 1.5rem;
+}
+
+.icons {
+  display: flex;
+  margin-left: -30vw;
+}
+
+.icon {
+  margin-left: 25%;
+}
+
+@media (min-width: 100em) {
+  .icons {
+    margin-left: -20vw;
+  }
+}
+
+@media (min-width: 150em) {
+  .icons {
+    margin-left: -10vw;
+  }
+}
+
+.me {
+  display: flex;
+}
+
+small {
+  color: var(--clr-primary-400);
+  font-weight: bold;
+}
+
+small p {
+  font-weight:normal;
+}
+
+@media (max-width: 60em) {
+  .icons {
+    margin-right: 0;
+    margin-left: 0;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .me {
+    display: block;
+  }
+}
+
+.icon-small {
+  width: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.icons-small {
+  display: flex;
+}
+
+.icons-small small {
+  padding-top: 0.2rem;
+  font-weight: normal;
+}
+
+.me h2 {
+  width: 100%;
+  margin-right: 3rem;
+  margin-top: 0.5rem;
+}
+
+.profile-pic {
+
+  align-self: center;
+}
+
+@media (min-width: 40em) {
+  .profile-pic {  
+    max-width: 30%;
+    min-width: 14rem;
+  }
+}
+
+@media (max-width: 40em) {
+  .profile-pic {
+    height: 200%;
+    width: 15rem;
+  }
+}
+
+.profile-image {
+  transform: 
+    scaleX(96%)
+    translateX(1.6%)
+    scaleY(97%)
+}
+
+
+.about-me-content p{
+  font-size: large;
+  font-family: var(--ff-primary);
+}
+
+@media (max-width: 40em) {
+  .about-me-content p{
+    font-size: medium;
+  }
+  .welcome {
+    margin-bottom: 3vh;
+  }
+}
+
+.hero {
+}

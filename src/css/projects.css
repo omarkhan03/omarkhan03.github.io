@@ -1,0 +1,126 @@
+.project-thumbnail {
+  border-radius: 2rem;
+  border-color: var(--clr-primary-400);
+  border-style: solid;
+  background-color: black;
+  align-self: center;
+
+  cursor: pointer;
+  transition: border-width 0.3s;
+
+  display: flex;
+  overflow: hidden;
+}
+
+.project-thumbnail:hover {
+  border-width: 0.3rem;
+}
+
+@media (max-width: 40em) {
+  .project-thumbnail {
+      min-width: 90%;
+  }
+  .project-button-container {
+    justify-content: center;
+  }
+} 
+
+.project-button-container {
+  display: flex;
+  flex-direction: row;
+
+  gap: 1rem;
+  padding-bottom: 2rem;
+}
+
+.project-button {
+  font-size: 0.7em;
+  padding: 0.6rem;
+
+  font-family: var(--ff-accent);
+
+  color: var(--clr-primary-400);
+  border-color: var(--clr-primary-400);
+  border-radius: 0.5rem;
+  font-weight: 700;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.project-button:hover {
+  background-color: var(--clr-primary-400);
+  color: var(--clr-primary-200);
+}
+
+.project-title {
+  font-size: 1.2em;
+  border-width: 0 0 0.1em 0;
+  border-color: var(--clr-primary-400);
+  border-style: solid;
+  font-family: var(--ff-accent);
+  font-weight: 700;
+}
+
+.bg-1 {
+  background-color: var(--color-1);
+}
+
+.ct-1 button{
+  background-color: var(--color-1);
+}
+
+.ct-1 button:hover {
+  color: var(--color-1)
+}
+
+.bg-2 {
+  background-color: var(--color-2);
+}
+
+.ct-2 button{
+  background-color: var(--color-2);
+}
+
+.ct-2 button:hover {
+  color: var(--color-2)
+}
+
+
+@media (min-width: 40em) {
+  .project-title {
+  padding-left: 0.3em;
+  }
+}
+
+.project-body {
+  font-size: 0.9rem;
+}
+
+.project-image {
+  margin: 0;
+  border-radius: 2rem;
+  min-width: 100%;
+  min-height: 100%;
+  flex-shrink: 0;
+}
+
+.project-body a {
+  color: black;
+}
+
+.project-top-space {
+  padding-top: 10vw;
+}
+
+@media (min-width: 50em) {
+  .reverse {
+    flex-direction: row-reverse;
+  }
+  .reverse iframe {
+    margin-left: 0;
+    margin-right: 2.5rem;
+  }
+  .project-top-space {
+    padding-top: 10vw;
+  }
+}
