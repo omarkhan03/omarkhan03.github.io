@@ -101,7 +101,7 @@ window.addEventListener('resize', () =>
 
     // Update renderer
     renderer.setSize(sizes.width, sizes.height)
-    renderer.setPixelRatio(window.devicePixelRatio * 4)
+    renderer.setPixelRatio(window.devicePixelRatio * 2)
 })
 
 /**
@@ -135,7 +135,7 @@ controls.saveState()
 const renderer = new THREE.WebGLRenderer({
     alpha: true,
     canvas: canvas,
-    antialias: true 
+    // antialias: true 
 })
 renderer.setClearColor(0xffffff, 0);
 
@@ -143,7 +143,7 @@ renderer.setClearColor(0xffffff, 0);
 renderer.shadowMap.enabled = true
 renderer.shadowMap.type = THREE.PCFSoftShadowMap
 renderer.setSize(sizes.width, sizes.height)
-renderer.setPixelRatio(window.devicePixelRatio * 4)
+renderer.setPixelRatio(window.devicePixelRatio * 2)
 
 /**
  * Animate
