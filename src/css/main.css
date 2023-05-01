@@ -363,7 +363,7 @@ small p {
   min-width: min(40vw, 40rem);
 }
 
-.about-me-content p{
+.about-me-content p{ 
   font-size: large;
   font-family: var(--ff-primary);
 }
