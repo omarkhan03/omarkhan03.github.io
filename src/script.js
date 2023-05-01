@@ -38,17 +38,23 @@ loader.setDRACOLoader( dracoLoader );
 // Load a glTF resource
 loader.load(
 	// resource URL
-	'models/untitled.glb',
+	'models/me4.glb',
 	// called when the resource is loaded
 	function ( gltf ) {
 
-		scene.add( gltf.scene );
 
-		gltf.animations; // Array<THREE.AnimationClip>
-		gltf.scene; // THREE.Group
-		gltf.scenes; // Array<THREE.Group>
-		gltf.cameras; // Array<THREE.Camera>
-		gltf.asset; // Object
+        // var material = new THREE.LineBasicMaterial( { color: 0x000000 } );
+
+        // var geometry = new THREE.EdgesGeometry( gltf.scene.children[0].children[0].geometry );
+        // var wireframe1 = new THREE.LineSegments( geometry, material );
+
+        // gltf.scene.add( wireframe1 );
+        
+        gltf.scene.rotateX(Math.PI/2)
+        gltf.scene.rotateY(Math.PI/2)
+		scene.add( gltf.scene );
+        console.log(scene)
+
 
 	},
 	// called while loading is progressing
@@ -62,39 +68,32 @@ loader.load(
 
 		console.log( 'An error happened' );
 
-	}
+	},
 );
+
+
+
 
 /**
  * Lights
  */
-const ambientLight = new THREE.AmbientLight(0xd6e6ff, 2)
+const ambientLight = new THREE.AmbientLight(0xf6f2f9, 1.6)
 scene.add(ambientLight)
 
-const directionalLight = new THREE.DirectionalLight(0xffffff, 0.6)
-directionalLight.castShadow = true
-directionalLight.shadow.mapSize.set(1024, 1024)
-directionalLight.shadow.camera.far = 15
-directionalLight.shadow.camera.left = - 7
-directionalLight.shadow.camera.top = 7
-directionalLight.shadow.camera.right = 7
-directionalLight.shadow.camera.bottom = - 7
-directionalLight.position.set(5, 5, 5)
-scene.add(directionalLight)
 
 /**
  * Sizes
  */
 const sizes = {
     width: window.innerWidth/4,
-    height: window.innerHeight/4
+    height: window.innerWidth/4
 }
 
 window.addEventListener('resize', () =>
 {
     // Update sizes
     sizes.width = window.innerWidth/4
-    sizes.height = window.innerHeight/4
+    sizes.height = window.innerWidth/4
 
     // Update camera
     camera.aspect = sizes.width / sizes.height
@@ -102,7 +101,7 @@ window.addEventListener('resize', () =>
 
     // Update renderer
     renderer.setSize(sizes.width, sizes.height)
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+    renderer.setPixelRatio(window.devicePixelRatio * 4)
 })
 
 /**
@@ -110,14 +109,22 @@ window.addEventListener('resize', () =>
  */
 // Base camera
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 1000000)
-camera.position.set(0,-1,0)
+camera.position.set(0,2.4,0)
 
 camera.rotation.set(0,0,0)
+
+camera.up.set( 0, 0, -1 );
 
 scene.add(camera)
 
 // Controls
 const controls = new OrbitControls(camera, canvas)
+controls.enableRotate = false
+controls.enablePan = false
+controls.enableZoom = false
+
+controls.autoRotate = true
+controls.autoRotateSpeed = 7
 controls.target.set(0,0,0)
 controls.enableDamping = true
 controls.saveState()
@@ -127,7 +134,8 @@ controls.saveState()
  */
 const renderer = new THREE.WebGLRenderer({
     alpha: true,
-    canvas: canvas
+    canvas: canvas,
+    antialias: true 
 })
 renderer.setClearColor(0xffffff, 0);
 
@@ -135,13 +143,17 @@ renderer.setClearColor(0xffffff, 0);
 renderer.shadowMap.enabled = true
 renderer.shadowMap.type = THREE.PCFSoftShadowMap
 renderer.setSize(sizes.width, sizes.height)
-renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+renderer.setPixelRatio(window.devicePixelRatio * 4)
 
 /**
  * Animate
  */
 const clock = new THREE.Clock()
 let previousTime = 0
+
+
+
+
 
 const tick = () =>
 {
@@ -150,6 +162,8 @@ const tick = () =>
     previousTime = elapsedTime
 
     // console.log(camera.position, camera.rotation)
+
+    // scene.children[3].children.rotateY(0.01)
 
     // Update controls
     controls.update()

@@ -39,7 +39,24 @@ main {
 .webgl {
   position:relative;
   z-index: 3000;
-  border: 1px solid white;
+  /* width: 20vw !important;
+  height: 20vw !important; */
+  /* border: 1px solid white; */
+  align-self: center;
+}
+
+.move-a-bit-left {
+  transform: translateX(-5rem);
+}
+
+@media (max-width: 30em) {
+  .webgl {
+    width: 60vw !important;
+    height: 60vw !important;
+  }
+  .move-a-bit-left {
+    transform: translateX(0rem);
+  }
 }
 
 body,
@@ -341,6 +358,10 @@ small p {
     scaleY(97%)
 }
 
+
+.about-me-content {
+  min-width: min(40vw, 40rem);
+}
 
 .about-me-content p{
   font-size: large;
