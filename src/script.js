@@ -3,6 +3,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 import { ColladaLoader } from 'three/examples/jsm/loaders/ColladaLoader.js'
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader';
+import { LoadingManager } from 'three';
 
 // Canvas
 const canvas = document.getElementById('webgl')
@@ -10,25 +11,16 @@ const canvas = document.getElementById('webgl')
 // Scene
 const scene = new THREE.Scene()
 
-// Loading ICT model 
-// var loader = new ColladaLoader();
-// loader.load("/models/ICT/ICT_COLLADA.dae", function (result) {
+const loadingGif = document.getElementById('ld')
 
-//     const meshes = result.scene.children[0].children
+const loadingManager = new THREE.LoadingManager()
 
-//     for(const mesh of meshes) {
-//         const geometry = mesh.geometry
-//         console.log(geometry)
-//         const edges = new THREE.EdgesGeometry(geometry)
-//         const line = new THREE.LineSegments(edges, new THREE.LineBasicMaterial({ color: 0x000000, linewidth: 100 }))
-//         result.scene.add(line);
-//     }
-
-//     scene.add(result.scene);
-// });
+loadingManager.onLoad = function ( ) {
+    loadingGif.style.display = 'none';
+}
 
 // Instantiate a loader
-const loader = new GLTFLoader();
+const loader = new GLTFLoader(loadingManager);
 
 // Optional: Provide a DRACOLoader instance to decode compressed mesh data
 const dracoLoader = new DRACOLoader();
@@ -77,7 +69,7 @@ loader.load(
 /**
  * Lights
  */
-const ambientLight = new THREE.AmbientLight(0xf6f2f9, 1.6)
+const ambientLight = new THREE.AmbientLight(0xffffff, 1.8)
 scene.add(ambientLight)
 
 

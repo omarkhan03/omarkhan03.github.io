@@ -39,9 +39,6 @@ main {
 .webgl {
   position:relative;
   z-index: 3000;
-  /* width: 20vw !important;
-  height: 20vw !important; */
-  /* border: 1px solid white; */
   align-self: center;
 }
 
@@ -49,7 +46,7 @@ main {
   transform: translateX(-5rem);
 }
 
-@media (max-width: 30em) {
+@media (max-width: 50em) {
   .webgl {
     width: 60vw !important;
     height: 60vw !important;
@@ -109,7 +106,7 @@ section {
   padding: 6rem 0;
 }
 
-@media (min-width: 40em) {
+@media (min-width: 0em) {
   section {
     padding: 7rem 0;
   }
@@ -217,7 +214,6 @@ img {
   margin-bottom:-6rem;
   text-align: center;
 }
-
 
 .spacer {
   aspect-ratio: 500/50;
@@ -341,6 +337,7 @@ small p {
   .profile-pic {  
     max-width: 30%;
     min-width: 14rem;
+    
   }
 }
 
@@ -377,5 +374,15 @@ small p {
   }
 }
 
-.hero {
+#ld {
+  position: absolute;
+  /* align horizontally */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (min-width: 40em) {
+  #ld {
+    display: none;
+  }
 }
