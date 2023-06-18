@@ -238,7 +238,7 @@ img {
 }
 
 .layer3 {
-  background-image: url('./backgrounds/wave-haikei\ \(6\).svg');
+  background-image: url('./backgrounds/projectstoskills.svg');
 }
 
 .layer4 {
@@ -248,8 +248,10 @@ img {
   position: absolute;
 }
 
-.desert {
-  background-image: url('./backgrounds/desert.svg');
+
+
+.woods {
+  background-image: url('./backgrounds/woods.svg');
   transform: translateY(-100%);
   z-index: 10000;
   position: absolute;
