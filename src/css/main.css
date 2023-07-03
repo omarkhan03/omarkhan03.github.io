@@ -205,6 +205,9 @@ img {
   font-size: 0.8em;
   padding-top: 1rem;
   margin-bottom: -1rem;
+  color: white;
+  /*no underline*/
+  text-decoration: none !important;
 }
 
 .footer {
