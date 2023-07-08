@@ -388,6 +388,9 @@ small p {
 
 @media (min-width: 40em) {
   #ld {
-    display: none;
+    position:absolute;
+    z-index: 3000;
+    align-self: center;
+    transform: translateX(-28vw);
   }
 }
