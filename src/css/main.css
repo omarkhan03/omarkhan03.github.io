@@ -366,16 +366,21 @@ small p {
 }
 
 .about-me-content p{ 
-  font-size: large;
+  font-size: medium;
   font-family: var(--ff-primary);
 }
 
 @media (max-width: 40em) {
   .about-me-content p{
-    font-size: medium;
+    font-size: small;
   }
   .welcome {
     margin-bottom: 3vh;
+  }
+  .particulars {
+    /*horitzontally center*/
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -393,4 +398,17 @@ small p {
     align-self: center;
     transform: translateX(-28vw);
   }
+}
+
+.particulars {
+  margin-bottom: 0.5em;
+  background: linear-gradient(145deg, var(--color-2), var(--color-1));
+  width:fit-content;
+  padding: 0.3em;
+}
+
+.particulars p {
+  font-size: small;
+  margin: 0;
+  padding: 0;
 }
