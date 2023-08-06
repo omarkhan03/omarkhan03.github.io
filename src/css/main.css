@@ -246,7 +246,7 @@ img {
 
 .layer4 {
   background-image: url('./backgrounds/wave-haikei\ \(5\).svg');
-  transform: translateY(-100%);
+  transform: translateY(0%);
   z-index: 10000;
   position: absolute;
 }

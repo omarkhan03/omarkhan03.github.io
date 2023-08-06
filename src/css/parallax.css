@@ -68,8 +68,6 @@ section {
 }
 
 .no3 {
-
-    padding-bottom: 10vh;
 }
 
 
@@ -91,6 +89,7 @@ section {
 
 .highlight p {
     color: white;
+    font-size: small;
 }
 
 .highlight p a {
