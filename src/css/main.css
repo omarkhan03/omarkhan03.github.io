@@ -384,6 +384,12 @@ small p {
   }
 }
 
+@media (min-width: 120em) {
+  .about-me-content {
+    margin-top: 10vh;
+  }
+}
+
 #ld {
   position: absolute;
   /* align horizontally */
