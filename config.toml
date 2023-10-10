@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "/hugo-coder/"
 title = "Omar ☼ Khan"
 theme = "hugo-coder"
 languageCode = "en"
