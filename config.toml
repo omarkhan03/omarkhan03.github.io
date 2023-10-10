@@ -1,4 +1,4 @@
-baseURL = "/hugo-coder/"
+baseURL = "/"
 title = "Omar ☼ Khan"
 theme = "hugo-coder"
 languageCode = "en"
@@ -152,14 +152,14 @@ languageName = ":uk:"
 [[languages.en.menu.main]]
 name = "About"
 weight = 1
-url = "/hugo-coder/about/"
+url = "about/"
 
 [[languages.en.menu.main]]
 name = "Resume"
 weight = 2
-url = "/hugo-coder/resume/"
+url = "resume/"
 
 [[languages.en.menu.main]]
 name = "Projects"
 weight = 3
-url = "/hugo-coder/projects/"
+url = "projects/"
