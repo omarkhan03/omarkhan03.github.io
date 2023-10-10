@@ -148,14 +148,14 @@ languageName = ":uk:"
 [[languages.en.menu.main]]
 name = "About"
 weight = 1
-url = "about/"
+url = "/hugo-coder/about/"
 
 [[languages.en.menu.main]]
 name = "Resume"
 weight = 2
-url = "resume/"
+url = "/hugo-coder/resume/"
 
 [[languages.en.menu.main]]
 name = "Projects"
 weight = 3
-url = "projects/"
+url = "/hugo-coder/projects/"
