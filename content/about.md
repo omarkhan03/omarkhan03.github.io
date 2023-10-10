@@ -6,7 +6,7 @@ aliases = ["about-us", "about-hugo", "contact"]
 author = "Hugo Authors"
 +++
 
-<img src="/images/pong.jpeg" style="width: 200px; border-radius: 20px;"/>
+<img src="/static/images/pong.jpeg" style="width: 200px; border-radius: 20px;"/>
 
 
 I'm a student at the University of Calgary, currently in the third year of my journey to recieving an Honours BSc in Computer Science.
@@ -24,7 +24,7 @@ ___
 
 As for my other hobbies, I'm a huge fishing enthusiast after my friend introduced me to it last summer, although I'm not very good 🥲 (the photo below is my most successful catch). I also enjoy hiking, occasionally skiing, and working out on gynmastic rings.
 
-<img src="/images/fish.png" style="width: 400px; border-radius: 20px;"/>
+<img src="/static/images/fish.png" style="width: 400px; border-radius: 20px;"/>
 
 
 &nbsp;
