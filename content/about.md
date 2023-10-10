@@ -8,7 +8,7 @@ author = "Hugo Authors"
 
 !["method img"](images/pong.jpeg)
 
-<img src="images/pong.jpeg" style="width: 200px; border-radius: 20px;"/>
+<img src="/images/pong.jpeg" style="width: 200px; border-radius: 20px;"/>
 
 
 I'm a student at the University of Calgary, currently in the third year of my journey to recieving an Honours BSc in Computer Science.
