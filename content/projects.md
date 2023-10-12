@@ -3,13 +3,6 @@ title = "Projects"
 slug = "projects"
 +++
 
-<h2>ICT-Explorer + Room-Finder <br> <span style="font-size: small">in-progress!</span></h2>
-<img src="../images/ict.gif" style="flex: 1; padding: 1rem; width: 100%; max-width: 550px"/>
-<div>
-    <a href="https://ict-explorer.vercel.app"><button style="margin-right: 0.5em; cursor: pointer;">Link</button></a>
-    <a href="https://github.com/omarkhan03/ICT-Explorer"><button style="margin-right: 0.5em; cursor: pointer;">GitHub</button></a>
-</div>
-
 <h2>Calgary Drone Simulator</h2>
 <img src="../images/cds.gif" width=""/>
 <div>
@@ -31,4 +24,11 @@ slug = "projects"
 <div>
     <a href="https://www.youtube.com/watch?v=_imOrhn8_l8"><button style="margin-right: 0.5em; cursor: pointer;">Video</button></a>
     <a href="https://github.com/anhnguyen6535/ProjectVoice"><button style="margin-right: 0.5em; cursor: pointer;">GitHub</button></a>
+</div>
+
+<h2>ICT-Explorer + Room-Finder <br> <span style="font-size: small">in-progress!</span></h2>
+<img src="../images/ict.gif" style="flex: 1; padding: 1rem; width: 100%; max-width: 550px"/>
+<div>
+    <a href="https://ict-explorer.vercel.app"><button style="margin-right: 0.5em; cursor: pointer;">Link</button></a>
+    <a href="https://github.com/omarkhan03/ICT-Explorer"><button style="margin-right: 0.5em; cursor: pointer;">GitHub</button></a>
 </div>
