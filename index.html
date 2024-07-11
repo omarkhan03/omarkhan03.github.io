@@ -8,12 +8,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="favicon.svg">
-    <title>Omar's webpage :D</title>
+    
+    <title>Omar Khan</title>
 </head>
 <style>
     body {
         padding: 1rem;
-        max-width: 700px;
+        max-width: 1000px;
         margin: auto;
         /*background-color: rgb(36, 30, 30);*/
         background-color: rgb(30, 36, 32);
@@ -30,6 +31,11 @@
         color:bisque;
     }
 
+    span {
+        color:bisque;
+        font-style: italic;
+    }
+
     hr {
         margin-top: 2rem;
         margin-bottom: 2rem;
@@ -38,27 +44,33 @@
         margin-top: 3rem;
         font-size: x-small;
     }
+    .pdfobject-container { 
+        height: 500px; 
+        border: 1px solid #ccc; 
+    }
+
 </style>
 <body>
 
     <img src="pfp (v2).jpg" alt="me">
 
     <h1>Omar Khan</h1>
-    <h3>Pursuing an Honours BSc in Computer Science at UCalgary</h3>
 
     <hr>
 
-    <p>I'm a 4th year undergrad at the University of Calgary.</p>
-    <p>I'm also a student researcher in <a href="https://www.kangsookim.com" target="_blank">Dr. Kim</a>'s <a href="https://www.hxi-lab.ca" target="_blank">HXI Lab</a>. I received the Alberta Innovates Summer Research Studentship Award to fund a project related to VR locomotion in Summer 2024.</p>
+    <h2>Bio</h2>
+    <p>I am a 4th year honours Bachelor of Science (BSc) student in Computer Science at the University of Calgary in Alberta, Canada.</p>
+    <p>I am also a student researcher under <a href="https://www.kangsookim.com" target="_blank">Dr. Kangsoo Kim</a> in the <a href="https://www.hxi-lab.ca" target="_blank">Human-X-Interaction Lab</a>. I received the Alberta Innovates Summer Research Studentship Award to fund a project in Summer 2024, related to avatars in VR and the Proteus Effect.</p>
     <p>Back in Summer 2023, I received the NSERC Undergraduate Student Research Award. My project explored using virtual agents in VR to improve real-world route learning. Accepted as a <a href="https://doi.org/10.1109/VRW62533.2024.00238" target="_blank">poster</a> at IEEE VR 2024!</p>
-    <p>I pride myself on my insatiable curiosity, and I love to take on challenging topics such as <a href="https://www.youtube.com/watch?v=s_vSa3xFStI" target="_blank">graphics programming</a> and <a href="https://www.youtube.com/watch?v=kxmPv2JxLQo" target="_blank">tangible interfaces</a>.</p>
-    <p>In my free time I like to hike in the rockies, go fishing, and read manga.</p>
+    <p> <span>I expect to graduate in Spring 2025 and I am currently applying to PhD positions in Virtual Reality, Augmented Reality, Embodied Agents and Avatars, and Human-Computer Interaction.</span> My CV is attached at the bottom of this webpage. </p>
+    <p>I pride myself on my insatiable curiosity, and I love to venture out of my comfort zone to tackle challenging topics such as <a href="https://www.youtube.com/watch?v=s_vSa3xFStI" target="_blank">graphics programming</a> and <a href="https://www.youtube.com/watch?v=kxmPv2JxLQo" target="_blank">tangible interfaces</a>.</p>
+    <p>In my free time I like to hike in the rockies, go fishing, read manga, and play difficult video games (currently playing through Elden Ring).</p>
 
     <hr>
 
-    <h3>Links</h3>
-    <p><a href="https://discord.com/users/568569824964378625" target="_blank">Discord</a> (username: duppy03)
+    <h2>Links</h2>
     <p><a href="mailto:omar.khan2@ucalgary.ca" target="_blank">Email</a> (omar.khan2[at]ucalgary.ca)</p>
+    <p><a href="https://discord.com/users/568569824964378625" target="_blank">Discord</a> (username: duppy03)
     <p><a href="https://www.linkedin.com/in/okcs/" target="_blank">LinkedIn</a></p>
     <p><a href="https://www.youtube.com/channel/UCqx9f6yDVJZ7GctAuC59adw" target="_blank">YouTube</a></p>
     <p><a href="https://github.com/omarkhan03" target="_blank">GitHub</a></p>
@@ -66,6 +78,11 @@
 
     <hr>
 
-    <footer>Last updated in June 2024</footer>
+    <h2>Curriculum Vitae (CV)</h2>
+    <div id="my-pdf"></div>
+
+    <footer>Last updated in July 2024</footer>
 </body>
+<script src="https://unpkg.com/pdfobject"></script>
+<script>PDFObject.embed("cv.pdf", "#my-pdf");</script>
 </html>
