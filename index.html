@@ -48,11 +48,51 @@
         height: 500px; 
         border: 1px solid #ccc; 
     }
+    /*flexbox row*/
+    .publication { 
+        display: flex; 
+        flex-direction: row; 
+        justify-content: center; 
+        align-items: top; 
+
+    }
+
+
+    .publication p { 
+        margin-left: 1rem;
+        
+        /* make paragraphs closer together*/
+        margin-bottom: 0rem;
+        margin-top: 0.5rem;
+    }
+    .publication span { 
+        color: bisque; 
+        font-weight: bolder;
+        /*underline*/
+        text-decoration: underline;
+        /*no italic*/
+        font-style: normal;
+    }
+
+        /*mobile*/
+        @media (max-width: 600px) {
+        .publication { 
+            flex-direction: column; 
+        }
+        .publication p {
+            margin-left: 0;
+        }
+    }
+
+    .link {
+        margin-bottom: 0rem;
+        margin-top: 0.5rem;
+    }
 
 </style>
 <body>
 
-    <img src="pfp (v2).jpg" alt="me">
+    <img src="pfp (v2).jpg" alt="A photo of me.">
 
     <h1>Omar Khan</h1>
 
@@ -60,28 +100,46 @@
 
     <h2>Bio</h2>
     <p>I am a 4th year honours Bachelor of Science (BSc) student in Computer Science at the University of Calgary in Alberta, Canada.</p>
-    <p>I am also a student researcher under <a href="https://www.kangsookim.com" target="_blank">Dr. Kangsoo Kim</a> in the <a href="https://www.hxi-lab.ca" target="_blank">Human-X-Interaction Lab</a>. I received the Alberta Innovates Summer Research Studentship Award to fund a project in Summer 2024, related to avatars in VR and the Proteus Effect.</p>
-    <p>Back in Summer 2023, I received the NSERC Undergraduate Student Research Award. My project explored using virtual agents in VR to improve real-world route learning. Accepted as a <a href="https://doi.org/10.1109/VRW62533.2024.00238" target="_blank">poster</a> at IEEE VR 2024!</p>
-    <p> <span>I expect to graduate in Spring 2025 and I am currently applying to PhD positions in Virtual Reality, Augmented Reality, Embodied Agents and Avatars, and Human-Computer Interaction.</span> My CV is attached at the bottom of this webpage. </p>
-    <p>I pride myself on my insatiable curiosity, and I love to venture out of my comfort zone to tackle challenging topics such as <a href="https://www.youtube.com/watch?v=s_vSa3xFStI" target="_blank">graphics programming</a> and <a href="https://www.youtube.com/watch?v=kxmPv2JxLQo" target="_blank">tangible interfaces</a>.</p>
-    <p>In my free time I like to hike in the rockies, go fishing, read manga, and play difficult video games (currently playing through Elden Ring).</p>
+    <p>I am also a student researcher under <a href="https://www.kangsookim.com" target="_blank">Dr. Kangsoo Kim</a> in the <a href="https://www.hxi-lab.ca" target="_blank">Human-X-Interaction Lab</a>. I received the Alberta Innovates Summer Research Studentship Award to fund a project in Summer 2024, related to Avatars in VR and the Proteus Effect.</p>
+    <p>Back in Summer 2023, I received the NSERC Undergraduate Student Research Award. My project explored using Agents in VR to improve real-world route learning. The results were presented as a <a href="https://doi.org/10.1109/VRW62533.2024.00238" target="_blank">poster</a> at IEEE VR 2024.</p>
+    <p> <span>I expect to graduate in Spring 2025 and I am currently looking for PhD openings in Virtual Reality, Augmented Reality, Agents and Avatars, and Human-Computer Interaction.</span> My CV is attached at the bottom of this webpage. </p>
+    <!--<p>I pride myself on my insatiable curiosity, and I love to venture out of my comfort zone to tackle challenging topics such as <a href="https://www.youtube.com/watch?v=s_vSa3xFStI" target="_blank">graphics programming</a> and <a href="https://www.youtube.com/watch?v=kxmPv2JxLQo" target="_blank">tangible interfaces</a>.</p>-->
+    <p>As for my life outside of research, I enjoy hiking in the rockies, going fishing, reading manga, and playing video games.</p>
+
+    <hr>
+
+    <h2>Publications</h2>
+
+
+    <div class="publication">
+        <img src="pub1.png" alt="Virtual Human and Symbol-based Guide Cue in a digitally reconstructed campus building.">
+        <div>
+            <p>[Poster]</p>
+            <p> <strong>Exploring the Impact of Virtual Human and Symbol-Based Guide Cues in Immersive VR on Real-World Navigation Experience</strong></p>
+            <p> <span>Omar Khan</span>, Anh Nguyen, Michael Francis, and Kangsoo Kim</p>
+            <p>Proceedings of the IEEE Conference on Virtual Reality and 3D User Interfaces Abstracts and Workshops (IEEE VRW), 2024, pp. 883–884.</p>
+            <p>doi: <a target="_blank" href="https://doi.org/10.1109/VRW62533.2024.00238">10.1109/VRW62533.2024.00238</a></p>
+        </div>
+
+
+    </div>
 
     <hr>
 
     <h2>Links</h2>
-    <p><a href="mailto:omar.khan2@ucalgary.ca" target="_blank">Email</a> (omar.khan2[at]ucalgary.ca)</p>
-    <p><a href="https://discord.com/users/568569824964378625" target="_blank">Discord</a> (username: duppy03)
-    <p><a href="https://www.linkedin.com/in/okcs/" target="_blank">LinkedIn</a></p>
-    <p><a href="https://www.youtube.com/channel/UCqx9f6yDVJZ7GctAuC59adw" target="_blank">YouTube</a></p>
-    <p><a href="https://github.com/omarkhan03" target="_blank">GitHub</a></p>
-    <p><a href="https://scholar.google.com.au/citations?hl=en&user=aVs159UAAAAJ" target="_blank">Google Scholar</a></p>
+    <p class="link"><a href="mailto:omar.khan2@ucalgary.ca" target="_blank">Email</a> (omar.khan2[at]ucalgary.ca)</p>
+    <p class="link"><a href="https://discord.com/users/568569824964378625" target="_blank">Discord</a> (username: duppy03)
+    <p class="link"><a href="https://www.linkedin.com/in/okcs/" target="_blank">LinkedIn</a></p>
+    <p class="link"><a href="https://www.youtube.com/channel/UCqx9f6yDVJZ7GctAuC59adw" target="_blank">YouTube</a> (random videos of stuff I make)</p>
+    <p class="link"><a href="https://github.com/omarkhan03" target="_blank">GitHub</a></p>
+    <p class="link"><a href="https://scholar.google.com.au/citations?hl=en&user=aVs159UAAAAJ" target="_blank">Google Scholar</a></p>
 
     <hr>
 
     <h2>Curriculum Vitae (CV)</h2>
     <div id="my-pdf"></div>
 
-    <footer>Last updated in July 2024</footer>
+    <footer>Last updated in August 2024</footer>
 </body>
 <script src="https://unpkg.com/pdfobject"></script>
 <script>PDFObject.embed("cv.pdf", "#my-pdf");</script>
