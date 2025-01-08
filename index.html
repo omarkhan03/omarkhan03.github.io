@@ -14,15 +14,15 @@
 <style>
     :root {
         /* --background: rgb(233, 233, 233); */
-        --background: #252530;
+        --background: #dddddd;
         /* --base: black; */
-        --base: white;
+        --base: rgb(0, 0, 0);
         /*--highlight:rgb(41, 40, 78);*/
-        --highlight: #FFD67E;
+        --highlight: #0a0096;
     }
     body {
         padding: 1rem;
-        max-width: 1000px;
+        max-width: 1200px;
         margin: auto;
         /*background-color: rgb(36, 30, 30);*/
         /* background-color: rgb(9, 39, 78); */
@@ -34,7 +34,7 @@
 
     img {
         max-width: 10rem;
-        margin: auto;
+        /* margin: auto; */
     }
 
     a {
@@ -64,9 +64,8 @@
     .publication { 
         display: flex; 
         flex-direction: row; 
-        justify-content: center; 
-        align-items: top; 
-
+        /* justify-content: center;  */
+        align-items: center; 
     }
 
     .publication p { 
@@ -85,10 +84,11 @@
         font-style: normal;
     }
 
-        /*mobile*/
-        @media (max-width: 600px) {
+    /*mobile*/
+    @media (max-width: 600px) {
         .publication { 
             flex-direction: column; 
+            align-items: flex-start;
         }
         .publication p {
             margin-left: 0;
@@ -103,65 +103,79 @@
 
 /*double border on bottom*/
 
-    .bb {
-        border-bottom: 7px solid var(--highlight);
-        border-radius: 0px 0px 0px 35px;
-    }
+
 
 </style>
 <body>
 
-    <img src="pfp.png" alt="A photo of me." class="bb">
+    <img src="images/pfp.png" alt="A photo of me." class="bb">
 
     <h1>Omar Khan</h1>
 
     <hr>
 
-    <h2>Bio 🥸</h2>
+    <h2>Bio</h2>
 
-    <p>I am a 4th year honours Bachelor of Science (BSc) student in Computer Science at the University of Calgary.
-        I am also a research assistant with <a href="https://www.kangsookim.com" target="_blank">Dr. Kangsoo Kim</a> in the <a href="https://www.hxi-lab.ca" target="_blank">Human-X-Interaction Lab</a>, 
-        and with <a href="https://seriousxr.ca/our-team/frank/" target="_blank">Dr. Frank Maurer</a> in the <a href="https://seriousxr.ca/" target="_blank">SeriousXR Lab</a>. 
-        I work on projects in Virtual and Augmented Reality (VR/AR), Virtual Agents and Avatars, and more generally, Human-Computer Interaction (HCI).
+    <p>I am a 4th year honours Bachelor of Science student in Computer Science at the University of Calgary.
+        I am also a research assistant with <a href="https://www.kangsookim.com" target="_blank">Dr. Kangsoo Kim</a> in the <a href="https://www.hxi-lab.ca" target="_blank">Human-X-Interaction Lab</a>.
+        <!--, and with <a href="https://seriousxr.ca/our-team/frank/" target="_blank">Dr. Frank Maurer</a> in the <a href="https://seriousxr.ca/" target="_blank">SeriousXR Lab</a>. -->
+        I work on projects in Extended Reality (XR), Virtual Agents/Avatars, and more generally, Human-Computer Interaction (HCI). 
     </p>
     
-    <p> In Summer 2024, I received the Alberta Innovates Summer Research Studentship Award. 
+    <p>See my publications below.</p>
+
+    <!-- <p> In Summer 2024, I received the Alberta Innovates Summer Research Studentship Award. 
         My project explored how avatar-locomotion congruence affects user experience in VR.
-        It was a winner at the Undergraduate Research Symposium of my university
-        (<a href="https://www.youtube.com/watch?v=cD4T22XtF4c" target="_blank">video</a>).</p>
+        It was a winner at the Undergraduate Research Symposium of my university, and I will be presenting it as a poster at IEEE VR 2025. </p>
 
     <p>In Summer 2023, I received the NSERC Undergraduate Student Research Award. My project involved using agents in VR to improve real-world route learning. 
-        The results were presented as a <a href="https://doi.org/10.1109/VRW62533.2024.00238" target="_blank">poster</a> at IEEE VR 2024 in Orlando, USA.</p>
+        The results were presented as a poster at IEEE VR 2024 in Orlando, USA.</p> -->
     <!-- <p> <span>I expect to graduate in Spring 2025 and I am currently looking for PhD openings in Virtual Reality, Augmented Reality, Agents and Avatars, and Human-Computer Interaction.</span> 
         My CV is attached at the bottom of this webpage. </p> -->
     <!--<p>I pride myself on my insatiable curiosity, and I love to venture out of my comfort zone to tackle challenging topics such as <a href="https://www.youtube.com/watch?v=s_vSa3xFStI" target="_blank">graphics programming</a> and <a href="https://www.youtube.com/watch?v=kxmPv2JxLQo" target="_blank">tangible interfaces</a>.</p>-->
-    <p>I like to hike in the rockies, bike around town, and play video games.</p>
+    
+    <!-- <p>I like to hike in the rockies, bike around town, and play video games.</p> -->
 
     <hr>
 
     <h2>Publications 📝</h2>
 
-
-    <div class="publication">
-        <img src="pub1.png" alt="Virtual Human and Symbol-based Guide Cue in a digitally reconstructed campus building.">
+    <div class="publication" style="padding-bottom: 3rem">
+        <img src="images/pub2.png" alt="Four avatar-locomotion combinations.">
         <div>
             <div style="display: flex; flex-direction: row; gap: 10px;">
-                <p>[ IEEE VRW ]</p>
-                <p>[ 2024 ]</p>
-                <p>[ Poster ]</p>
+                <p><em>Poster</em></p>
+                <p><em>IEEE VRW</em></p>
+                <p><em>2025</em></p>
+            </div>
+            <p> <strong>“I look like a gorilla, but don’t move like one!”: Impact of Avatar-Locomotion Congruence in Virtual Reality</strong></p>
+            <p> <span>Omar Khan</span>, Hyeongil Nam, Kangsoo Kim</p>
+            <!-- <p>Proceedings of the IEEE Conference on Virtual Reality and 3D User Interfaces Abstracts and Workshops (IEEE VRW), 2024, pp. 883–884.</p> -->
+            <div style="display: flex; flex-direction: row; gap: 10px;">
+                <!-- <p>Links: </p> -->
+                <!-- <p>[ <a target="_blank" href="https://doi.org/10.1109/VRW62533.2024.00238">doi</a> ]</p> -->
+                <!-- <p>[ <a target="_blank" href="/publications/IEEEVR2024_VRNavigation.pdf">pdf</a> ]</p> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="publication">
+        <img src="images/pub1.png" alt="Virtual Human and Symbol-based Guide Cue in a digitally reconstructed campus building.">
+        <div>
+            <div style="display: flex; flex-direction: row; gap: 10px;">
+                <p><em>Poster</em></p>
+                <p><em>IEEE VRW</em></p>
+                <p><em>2024</em></p>
             </div>
             <p> <strong>Exploring the Impact of Virtual Human and Symbol-Based Guide Cues in Immersive VR on Real-World Navigation Experience</strong></p>
-            <p> <span>Omar Khan</span>, Anh Nguyen, Michael Francis, and Kangsoo Kim</p>
+            <p> <span>Omar Khan</span>, Anh Nguyen, Michael Francis, Kangsoo Kim</p>
             <!-- <p>Proceedings of the IEEE Conference on Virtual Reality and 3D User Interfaces Abstracts and Workshops (IEEE VRW), 2024, pp. 883–884.</p> -->
             <div style="display: flex; flex-direction: row; gap: 10px;">
                 <p>Links: </p>
                 <p>[ <a target="_blank" href="https://doi.org/10.1109/VRW62533.2024.00238">doi</a> ]</p>
                 <p>[ <a target="_blank" href="/publications/IEEEVR2024_VRNavigation.pdf">pdf</a> ]</p>
             </div>
-
         </div>
-
-
     </div>
 
     <hr>
@@ -192,7 +206,7 @@
     <!-- <h2>Curriculum Vitae (CV)</h2>
     <div id="my-pdf"></div> -->
 
-    <footer>Last updated in December 2024</footer>
+    <footer>Last updated in January 2025</footer>
 </body>
 <!-- <script src="https://unpkg.com/pdfobject"></script>
 <script>PDFObject.embed("cv.pdf", "#my-pdf");</script> -->
