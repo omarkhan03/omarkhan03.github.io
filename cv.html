@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Omar A. Khan - CV</title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f3f3f3;
+      color: #111;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+      background: #f3f3f3;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.75rem 1rem;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid #ddd;
+      backdrop-filter: blur(8px);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 650;
+      line-height: 1.2;
+    }
+
+    header a {
+      flex: 0 0 auto;
+      border: 1px solid #111;
+      border-radius: 999px;
+      padding: 0.45rem 0.8rem;
+      color: #111;
+      text-decoration: none;
+      font-size: 0.9rem;
+      line-height: 1;
+      background: #fff;
+    }
+
+    #viewer {
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 1rem 0.75rem 2rem;
+    }
+
+    .page {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 0 auto 1rem;
+      background: #fff;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.16);
+    }
+
+    #status {
+      padding: 2rem 1rem;
+      text-align: center;
+      color: #444;
+    }
+
+    #status a {
+      color: inherit;
+    }
+
+    @media print {
+      header,
+      #status {
+        display: none;
+      }
+
+      body,
+      #viewer {
+        background: #fff;
+        padding: 0;
+      }
+
+      .page {
+        box-shadow: none;
+        margin: 0;
+        page-break-after: always;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html">🡐</a>
+    <h1>Omar A. Khan - CV</h1>
+    <a href="cv.pdf" download>Download PDF</a>
+  </header>
+
+  <main id="viewer" aria-label="CV PDF viewer">
+    <p id="status">Loading CV...</p>
+  </main>
+
+  <script type="module">
+    import * as pdfjsLib from "https://cdn.jsdelivr.net/npm/pdfjs-dist@4.10.38/build/pdf.mjs";
+
+    pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdn.jsdelivr.net/npm/pdfjs-dist@4.10.38/build/pdf.worker.mjs";
+
+    const pdfUrl = "cv.pdf";
+    const viewer = document.getElementById("viewer");
+    const status = document.getElementById("status");
+    let pdfDocument = null;
+    let renderGeneration = 0;
+
+    async function renderPdf() {
+      if (!pdfDocument) return;
+
+      const generation = ++renderGeneration;
+      viewer.innerHTML = "";
+
+      const availableWidth = Math.min(viewer.clientWidth, 900);
+      const outputScale = Math.min(window.devicePixelRatio || 1, 2);
+
+      for (let pageNumber = 1; pageNumber <= pdfDocument.numPages; pageNumber++) {
+        if (generation !== renderGeneration) return;
+
+        const page = await pdfDocument.getPage(pageNumber);
+        const unscaledViewport = page.getViewport({ scale: 1 });
+        const cssScale = availableWidth / unscaledViewport.width;
+        const viewport = page.getViewport({ scale: cssScale * outputScale });
+
+        const canvas = document.createElement("canvas");
+        canvas.className = "page";
+        canvas.width = Math.floor(viewport.width);
+        canvas.height = Math.floor(viewport.height);
+        canvas.style.width = `${Math.floor(viewport.width / outputScale)}px`;
+        canvas.style.height = `${Math.floor(viewport.height / outputScale)}px`;
+
+        viewer.appendChild(canvas);
+
+        const context = canvas.getContext("2d");
+        await page.render({ canvasContext: context, viewport }).promise;
+      }
+    }
+
+    async function loadPdf() {
+      try {
+        pdfDocument = await pdfjsLib.getDocument(pdfUrl).promise;
+        await renderPdf();
+      } catch (error) {
+        console.error(error);
+        viewer.innerHTML = `
+          <p id="status">
+            The CV could not be displayed here.
+            <a href="${pdfUrl}">Open the PDF directly</a>.
+          </p>
+        `;
+      }
+    }
+
+    let resizeTimer = null;
+    window.addEventListener("resize", () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(renderPdf, 250);
+    });
+
+    loadPdf();
+  </script>
+</body>
+</html>
