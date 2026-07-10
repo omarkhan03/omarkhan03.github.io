@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Omar A. Khan - CV</title>
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pdfjs-dist@4.10.38/web/pdf_viewer.css" />
   <style>
     :root {
       color-scheme: light;
@@ -24,7 +25,7 @@
     header {
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 100;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -62,13 +63,47 @@
       padding: 1rem 0.75rem 2rem;
     }
 
-    .page {
-      display: block;
-      width: 100%;
-      height: auto;
+    .pdf-page {
+      position: relative;
       margin: 0 auto 1rem;
       background: #fff;
       box-shadow: 0 2px 12px rgba(0, 0, 0, 0.16);
+      overflow: hidden;
+    }
+
+    .pdf-page canvas {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .textLayer,
+    .manualLinkLayer {
+      position: absolute;
+      inset: 0;
+    }
+
+    .textLayer {
+      z-index: 2;
+    }
+
+    .manualLinkLayer {
+      z-index: 5;
+      pointer-events: none;
+    }
+
+    .manualLinkLayer a {
+      position: absolute;
+      display: block;
+      pointer-events: auto;
+      background: transparent;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .manualLinkLayer a:focus {
+      outline: 2px solid #3118be;
+      outline-offset: 2px;
     }
 
     #status {
@@ -93,7 +128,7 @@
         padding: 0;
       }
 
-      .page {
+      .pdf-page {
         box-shadow: none;
         margin: 0;
         page-break-after: always;
@@ -103,9 +138,9 @@
 </head>
 <body>
   <header>
-    <a href="index.html">🡐</a>
+    <a href="index.html"> <small>home</small></a>
     <h1>Omar A. Khan - CV</h1>
-    <a href="cv.pdf" download>Download PDF</a>
+    <a href="cv.pdf" download> <small>download</small></a>
   </header>
 
   <main id="viewer" aria-label="CV PDF viewer">
@@ -119,9 +154,113 @@
 
     const pdfUrl = "cv.pdf";
     const viewer = document.getElementById("viewer");
-    const status = document.getElementById("status");
     let pdfDocument = null;
     let renderGeneration = 0;
+
+    async function goToPdfDestination(destination) {
+      try {
+        const explicitDest = Array.isArray(destination)
+          ? destination
+          : await pdfDocument.getDestination(destination);
+
+        if (!explicitDest || !explicitDest[0]) return;
+
+        const pageIndex = await pdfDocument.getPageIndex(explicitDest[0]);
+        const pageNumber = pageIndex + 1;
+        const target = document.querySelector(`[data-page-number="${pageNumber}"]`);
+        if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
+      } catch (error) {
+        console.warn("Could not navigate to internal PDF destination", error);
+      }
+    }
+
+    function addManualLinks(page, viewport, linkLayer, annotations) {
+      for (const annotation of annotations) {
+        if (annotation.subtype !== "Link" || !annotation.rect) continue;
+
+        const rect = viewport.convertToViewportRectangle(annotation.rect);
+        const left = Math.min(rect[0], rect[2]);
+        const top = Math.min(rect[1], rect[3]);
+        const width = Math.abs(rect[0] - rect[2]);
+        const height = Math.abs(rect[1] - rect[3]);
+
+        if (width <= 0 || height <= 0) continue;
+
+        const link = document.createElement("a");
+        link.style.left = `${left}px`;
+        link.style.top = `${top}px`;
+        link.style.width = `${width}px`;
+        link.style.height = `${height}px`;
+
+        const url = annotation.url || annotation.unsafeUrl;
+        if (url) {
+          link.href = url;
+          link.target = "_blank";
+          link.rel = "noopener noreferrer";
+          link.title = url;
+          link.setAttribute("aria-label", `Open link: ${url}`);
+        } else if (annotation.dest) {
+          link.href = "#";
+          link.title = "Jump within PDF";
+          link.setAttribute("aria-label", "Jump within PDF");
+          link.addEventListener("click", event => {
+            event.preventDefault();
+            goToPdfDestination(annotation.dest);
+          });
+        } else {
+          continue;
+        }
+
+        linkLayer.appendChild(link);
+      }
+    }
+
+    async function renderPage(pageNumber, availableWidth, outputScale, generation) {
+      if (generation !== renderGeneration) return;
+
+      const page = await pdfDocument.getPage(pageNumber);
+      const unscaledViewport = page.getViewport({ scale: 1 });
+      const cssScale = availableWidth / unscaledViewport.width;
+      const viewport = page.getViewport({ scale: cssScale });
+      const renderViewport = page.getViewport({ scale: cssScale * outputScale });
+
+      const pageDiv = document.createElement("section");
+      pageDiv.className = "pdf-page";
+      pageDiv.dataset.pageNumber = String(pageNumber);
+      pageDiv.style.width = `${Math.floor(viewport.width)}px`;
+      pageDiv.style.height = `${Math.floor(viewport.height)}px`;
+      pageDiv.style.setProperty("--scale-factor", viewport.scale);
+
+      const canvas = document.createElement("canvas");
+      const context = canvas.getContext("2d", { alpha: false });
+      canvas.width = Math.floor(renderViewport.width);
+      canvas.height = Math.floor(renderViewport.height);
+      canvas.style.width = `${Math.floor(viewport.width)}px`;
+      canvas.style.height = `${Math.floor(viewport.height)}px`;
+      pageDiv.appendChild(canvas);
+
+      const textLayerDiv = document.createElement("div");
+      textLayerDiv.className = "textLayer";
+      pageDiv.appendChild(textLayerDiv);
+
+      const manualLinkLayer = document.createElement("div");
+      manualLinkLayer.className = "manualLinkLayer";
+      pageDiv.appendChild(manualLinkLayer);
+
+      viewer.appendChild(pageDiv);
+
+      await page.render({ canvasContext: context, viewport: renderViewport }).promise;
+
+      const textLayer = new pdfjsLib.TextLayer({
+        textContentSource: page.streamTextContent({ includeMarkedContent: true }),
+        container: textLayerDiv,
+        viewport,
+      });
+      await textLayer.render();
+
+      const annotations = await page.getAnnotations({ intent: "display" });
+      addManualLinks(page, viewport, manualLinkLayer, annotations);
+    }
 
     async function renderPdf() {
       if (!pdfDocument) return;
@@ -130,27 +269,11 @@
       viewer.innerHTML = "";
 
       const availableWidth = Math.min(viewer.clientWidth, 900);
-      const outputScale = Math.min(window.devicePixelRatio || 1, 2);
+      const outputScale = Math.min(Math.max(window.devicePixelRatio || 1, 2), 3);
 
       for (let pageNumber = 1; pageNumber <= pdfDocument.numPages; pageNumber++) {
         if (generation !== renderGeneration) return;
-
-        const page = await pdfDocument.getPage(pageNumber);
-        const unscaledViewport = page.getViewport({ scale: 1 });
-        const cssScale = availableWidth / unscaledViewport.width;
-        const viewport = page.getViewport({ scale: cssScale * outputScale });
-
-        const canvas = document.createElement("canvas");
-        canvas.className = "page";
-        canvas.width = Math.floor(viewport.width);
-        canvas.height = Math.floor(viewport.height);
-        canvas.style.width = `${Math.floor(viewport.width / outputScale)}px`;
-        canvas.style.height = `${Math.floor(viewport.height / outputScale)}px`;
-
-        viewer.appendChild(canvas);
-
-        const context = canvas.getContext("2d");
-        await page.render({ canvasContext: context, viewport }).promise;
+        await renderPage(pageNumber, availableWidth, outputScale, generation);
       }
     }
 
