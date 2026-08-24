@@ -1,384 +1,258 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Omar A. Khan, Ph.D. student and XR researcher working on embodiment, interaction, and perception in AR, VR, and MR.">
+    <title>Omar A. Khan | XR Researcher</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" rel="icon" type="image/x-icon" href="images/favicon.svg">
-    <link rel="stylesheet" href="/academicons-1.9.4/css/academicons.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
-
-
-    <title>Omar A. Khan - XR Researcher</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="stylesheet" href="academicons-1.9.4/css/academicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="site-v6.css">
 </head>
-<style>
-    :root {
-        /* --background: rgb(233, 233, 233); */
-        /* --background: #dcfff2; */
-        /* --background: rgb(219, 204, 199); */
-        /* --base: black; */
-        --base: rgb(0, 0, 0);
-        /*--highlight:rgb(41, 40, 78);*/
-        --highlight: #3118be;
-        --light0: #dcd7ff;
-        --light1: #ffcece;
-        --light2: #ffdcbd;
-
-    }
-    body {
-        padding: 1rem;
-        max-width: 1200px;
-        margin: auto;
-
-        /*background-color: rgb(36, 30, 30);*/
-        /* background-color: rgb(9, 39, 78); */
-        /* background-color: #09182c; */
-        background: #ffffff;
-        
-        /* background: radial-gradient(circle, var(--background) 0%, white 100%); */
-        color: var(--base);
-        font-family: "Open Sans", sans-serif;  
-    }
-
-    img {
-        max-width: 10rem;
-        /* height: 7.5rem; */
-        /* margin: auto; */
-    }
-
-    .pfp {
-        max-width: 15rem;
-        /*border-radius: 50%;*/
-        /* border-top-color: #3118be;
-        border-left-color: #3118be;*/
-
-
-        /* border-color: #ddd8ff;
-        border-bottom-color: rgb(255, 216, 205);
-        border-right-color: rgb(255, 216, 205);
-        border-width: 1rem;
-        border-style: solid; */
-    }
-
-    a {
-        color: var(--highlight);
-        font-weight: bold;
-
-    }
-
-    span {
-        color: var(--highlight);
-        font-style: italic;
-    }
-
-    hr {
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-        border-color: var(--base);
-        border-style: solid;
-    }
-    footer {
-        margin-top: 3rem;
-        font-size: x-small;
-    }
-    .pdfobject-container { 
-        height: 500px; 
-        border: 1px solid #ccc; 
-    }
-    /*flexbox row*/
-    .publication { 
-        display: flex; 
-        flex-direction: row; 
-        /* justify-content: center;  */
-        align-items: center; 
-    }
-
-    .publication p { 
-        margin-left: 1rem;
-        
-        /* make paragraphs closer together*/
-        margin-bottom: 0.5rem;
-        margin-top: 0.5rem;
-    }
-    .publication span { 
-        color: var(--highlight);
-        font-weight: bolder;
-        /*underline*/
-        /* text-decoration: underline; */
-        /*no italic*/
-        font-style: normal;
-    }
-
-    /*mobile*/
-    @media (max-width: 600px) {
-        .publication { 
-            flex-direction: column; 
-            align-items: flex-start;
-        }
-        .publication p {
-            margin-left: 0;
-        }
-        body
-        {
-            font-size: smaller;
-        }
-
-    }
-
-    .link {
-        margin-bottom: 0rem;
-        margin-top: 0.5rem;
-    }
-
-    h2 {
-        font-size: larger;
-        /* color: #005856; */
-    }
-
-    .bubble {
-        background-color: var(--light0);
-        color: black;
-        padding: 0.2rem 0.5rem;
-        border-radius: 1rem;
-        font-size: smaller;
-        font-weight: bold;
-        /*fit text*/
-        display:inline;
-    }
-
-    ul {
-        padding-left: 1.5rem;
-    }
-
-
-</style>
 <body>
+    <header class="hero">
+        <img src="images/pfp.webp" alt="Portrait of Omar A. Khan" class="pfp">
 
-    <img src="images/pfp.webp" alt="A photo of me." class="pfp">
+        <div class="hero-content">
+            <h1>Omar A. Khan</h1>
+            <p class="subtitle">Ph.D. Student in Computer Science</p>
 
-    <h1>Omar A. Khan</h1>
-    <p style="font-size: larger; margin-bottom: 0.5rem;">Ph.D. Student in Computer Science</p>
+            <nav class="social-links" aria-label="Profile links">
+                <a href="https://www.linkedin.com/in/okcs/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+                <a href="cv.html" aria-label="Curriculum vitae" title="Curriculum vitae"><i class="ai ai-cv" aria-hidden="true"></i></a>
+                <a href="https://scholar.google.com/citations?user=aVs159UAAAAJ" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar" title="Google Scholar"><i class="ai ai-google-scholar" aria-hidden="true"></i></a>
+                <a href="https://orcid.org/0009-0000-1705-0950" target="_blank" rel="noopener noreferrer" aria-label="ORCID" title="ORCID"><i class="fa-brands fa-orcid" aria-hidden="true"></i></a>
+                <a href="https://www.researchgate.net/profile/Omar-Khan-64" target="_blank" rel="noopener noreferrer" aria-label="ResearchGate" title="ResearchGate"><i class="ai ai-researchgate" aria-hidden="true"></i></a>
+            </nav>
+            <button class="copy-email" type="button" data-email="oak44@drexel.edu">copy email address</button>
+        </div>
+    </header>
 
-    <div style="display: flexbox; font-size: smaller;">
-
-        <p class="link" style="display: inline;"><a style="color: black" href="mailto:oak44@drexel.edu" target="_blank"><i class="fas fa-envelope fa-2x"></i></a></p>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-        <p class="link" style="display: inline;"><a style="color: black" href="https://www.linkedin.com/in/okcs/" target="_blank"><i class="fa-brands fa-linkedin fa-2x"></i></a></p>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <p class="link" style="display: inline;"><a style="color: black" href="cv.html"><i class="ai ai-cv ai-2x"></i></a></p>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-        <p class="link" style="display: inline;"><a style="color: black" href="https://scholar.google.com/citations?user=aVs159UAAAAJ" target="_blank"><i class="ai ai-google-scholar ai-2x"></i></a></p>
-
-        <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
-        <!-- <p class="link" style="display: inline;"><a style="color: black" href="https://orcid.org/0009-0000-1705-0950" target="_blank"><i class="ai ai-orcid ai-2x"></i></a></p> -->
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <p class="link" style="display: inline;"><a style="color: black" href="https://orcid.org/0009-0000-1705-0950" target="_blank"><i class="fa-brands fa-orcid fa-2x"></i></a></p>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <!-- <p class="link" style="display: inline;"><a style="color: black" href="https://www.researchgate.net/profile/Omar-Khan-64" target="_blank"><i class="fa-brands fa-researchgate fa-2x"></i></a></p> -->
-        
-        <p class="link" style="display: inline;"><a style="color: black" href="https://www.researchgate.net/profile/Omar-Khan-64" target="_blank"><i class="ai ai-researchgate ai-2x"></i></a></p>
-
-    </div> 
-
+    <main>
     <hr>
 
-    <h2>About Me</h2>
+        <h2>About Me</h2>
 
-    <p> 
-        I am a Ph.D. student in Computer Science at Drexel University, Philadelphia, USA. I am advised by <a href="https://zyrcant.github.io/" target="_blank">Dr. Tiffany D. Do</a> as a member of the <a href="https://divalab.cci.drexel.edu/" target="_blank">DIVA Lab</a>. 
-        I am broadly interested in <b>embodiment</b>, <b>interaction</b>, and <b>perception</b> in <b>XR (AR, VR, MR)</b>, with a focus on avatars, social VR, multisensory perception, body perception, haptics, and tangible/physical user interfaces, all within the larger scope of human-centered computing.
-    </p>
+        <p>
+            I am a Ph.D. student in Computer Science at Drexel University, Philadelphia, USA. I am advised by <a href="https://zyrcant.github.io/" target="_blank" rel="noopener noreferrer">Dr. Tiffany D. Do</a> as a member of the <a href="https://divalab.cci.drexel.edu/" target="_blank" rel="noopener noreferrer">DIVA Lab</a>.
+            I am broadly interested in <b>embodiment</b>, <b>interaction</b>, and <b>perception</b> in <b>XR (AR, VR, MR)</b>, with a focus on avatars, social VR, multisensory perception, body perception, haptics, and tangible/physical user interfaces, all within the larger scope of human-centered computing.
+        </p>
 
-    <p>
-        I am trained in designing and implementing XR systems across the reality-virtuality continuum, and conducting user studies to extract insights on how next-generation computing interfaces shape human perception and behavior.
-        My work has been published in the prestigious <b>IEEE TVCG</b> journal, and presented at flagship conferences such as <b>IEEE VR</b>, <b>IEEE ISMAR</b>, and <b>ACM CHI</b>.
-    </p>
+        <p>
+            I am trained in designing and implementing XR systems across the reality-virtuality continuum, and conducting user studies to extract insights on how next-generation spatial computing interfaces shape human perception and behavior.
+            My work has been published in the prestigious <b>IEEE TVCG</b> journal, and presented at flagship conferences such as <b>IEEE VR</b>, <b>IEEE ISMAR</b>, and <b>ACM CHI</b>.
+        </p>
 
-    <p>
-        I graduated with a B.Sc. with First-Class Honours in Computer Science from the University of Calgary, in Canada.
-        Throughout my time there, I did research in avatars under the supervision of <a href="https://www.kangsookim.com" target="_blank">Dr. Kangsoo Kim</a> as a member of the <a href="https://www.hxi-lab.ca" target="_blank">HXI Lab</a>. 
-    </p>
+        <p>
+            I graduated with a B.Sc. with First-Class Honours in Computer Science from the University of Calgary, in Canada.
+            Throughout my time there, I did research in avatars under the supervision of <a href="https://www.kangsookim.com" target="_blank" rel="noopener noreferrer">Dr. Kangsoo Kim</a> as a member of the <a href="https://www.hxi-lab.ca" target="_blank" rel="noopener noreferrer">HXI Lab</a>.
+        </p>
 
-    <hr>
+        <hr>
 
-    <h2>News</h2>
-    <ul>
-        <li><strong>June 2026</strong>:&nbsp; One <a href="https://arxiv.org/abs/2606.26364v2" target="_blank">TVCG paper</a> accepted to IEEE ISMAR 2026!</li>
-        <li><strong>April 2026</strong>:&nbsp; Gave an <a href="./images/stony.jpg" target="_blank">invited talk</a> at Stony Brook University!</li>
-        <li><strong>February 2026</strong>:&nbsp; One <a href="https://doi.org/10.1145/3772363.3798977" target="_blank">poster</a> accepted to ACM CHI 2026!</li>
-        <li><strong>January 2026</strong>:&nbsp; One <a href="https://doi.org/10.1109/TVCG.2026.3679092" target="_blank">TVCG paper</a> accepted to IEEE VR 2026!</li>
-        <li><strong>October 2025</strong>:&nbsp; Presented my <a href="https://doi.org/10.1109/TVCG.2025.3616836" target="_blank">TVCG paper</a> at IEEE ISMAR 2025, received an <a href="ismar_honorable_mention.pdf" target="_blank">honorable mention</a>, and served as a student volunteer!</li>
-        <li><strong>September 2025</strong>:&nbsp; Joined Drexel University as a Ph.D. Student!</li>
-        
-    </ul>
+        <h2>News</h2>
+        <ul>
+            <li><strong>June 2026</strong>:  One <a href="https://arxiv.org/abs/2606.26364v2" target="_blank" rel="noopener noreferrer">TVCG paper</a> accepted to IEEE ISMAR 2026, and one <a href="https://drive.google.com/file/d/1is9tRo6McofKu7WY8pM6R0F0PSgx9nA9/view?usp=sharing" target="_blank">poster</a> accepted to ACM SUI 2026!</li>
+            <li><strong>April 2026</strong>:  Gave an <a href="./images/stony.jpg" target="_blank" rel="noopener noreferrer">invited talk</a> at Stony Brook University!</li>
+            <li><strong>February 2026</strong>:  One <a href="https://doi.org/10.1145/3772363.3798977" target="_blank" rel="noopener noreferrer">poster</a> accepted to ACM CHI 2026!</li>
+            <li><strong>January 2026</strong>:  One <a href="https://doi.org/10.1109/TVCG.2026.3679092" target="_blank" rel="noopener noreferrer">TVCG paper</a> accepted to IEEE VR 2026!</li>
+            <li><strong>October 2025</strong>:  Presented my <a href="https://doi.org/10.1109/TVCG.2025.3616836" target="_blank" rel="noopener noreferrer">TVCG paper</a> at IEEE ISMAR 2025, received an <a href="ismar_honorable_mention.pdf" target="_blank" rel="noopener noreferrer">honorable mention</a>, and served as a student volunteer!</li>
+            <li><strong>September 2025</strong>:  Joined Drexel University as a Ph.D. Student!</li>
 
-    <hr>
+        </ul>
 
-    <h2>Journal Articles</h2>
+        <hr>
 
-    <div class="publication" style="margin-bottom: 3rem;">
-        <img src="images/pub8.png" alt="Our 4 experimental conditions for feeling dog ears: no haptics, active haptics, passive haptics, and both.">
-        <div>
-            <p> <span style="color:crimson">New!</span> &nbsp; <strong>Having Dog Ears "for Real": Effects of Active and Passive Haptics on Embodying Non-Human Body Parts in VR</strong></p>
-            <p> <span>Omar A. Khan</span>, Bao Han Trinh, Lee Lisle, Tiffany D. Do</p>
-            <p>IEEE Transactions on Visualization and Computer Graphics (TVCG), 2026.</p>
-            <div style="display: flexbox; margin-bottom: 0.5rem;"> <p class="bubble">Acceptance rate: 16%</p> <p class="bubble" style="background-color:var(--light1)">Impact Factor: 6.8</p></div>
-            <div style="display: flex; flex-direction: row; gap: 1rem;">
-                <p><a target="_blank" href="https://arxiv.org/pdf/2606.26364v2"><i class="fa fa-file-pdf fa-lg"></i></a></p>
-            </div>
+        <h2>Journal Articles</h2>
 
-        </div>
-    </div>
+        <div class="publication">
+            <img src="images/pub9.png" alt="Our 4 experimental conditions for feeling dog ears: no haptics, active haptics, passive haptics, and both.">
+            <div class="publication-content">
+                <p> <span class="status status--new">New!</span>   <strong>Having Dog Ears "for Real": Effects of Active and Passive Haptics on Embodying Non-Human Body Parts in VR</strong></p>
+                <p> <span>Omar A. Khan</span>, Bao Han Trinh, Lee Lisle, Tiffany D. Do</p>
+                <p>IEEE Transactions on Visualization and Computer Graphics (TVCG), 2026.</p>
+                <div class="badges"> <p class="bubble">Acceptance rate: 16%</p> <p class="bubble bubble--impact">Impact Factor: 6.8</p></div>
+                <div class="publication-links">
+                    <p><a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2606.26364v2" aria-label="arXiv" title="arXiv"><i class="ai ai-arxiv ai-lg" aria-hidden="true"></i></a></p>
+                </div>
 
-    <div class="publication" style="margin-bottom: 3rem;">
-        <img src="images/pub6.png" alt="Avatars of various levels of body weight, body completeness, and clothing.">
-        <div>
-            <p><strong>Influence of Avatar Appearance and Target Distance on Locomotion Method Selection in Virtual Reality</strong></p>
-            <p> <span>Omar A. Khan</span>, Junyeong Kum, Hyeongil Nam, Myungho Lee, Kangsoo Kim</p>
-            <p>IEEE Transactions on Visualization and Computer Graphics (TVCG), vol. 32, no. 5, pp. 4668-4677, 2026.</p>
-            <div style="display: flexbox; margin-bottom: 0.5rem;"> <p class="bubble">Acceptance rate: 20%</p> <p class="bubble" style="background-color:var(--light1)">Impact Factor: 6.8</p></div>
-            <div style="display: flex; flex-direction: row; gap: 1rem;">
-                <p><a target="_blank" href="https://doi.org/10.1109/TVCG.2026.3679092"><i class="ai ai-doi ai-lg"></i></a></p>
-                <p><a target="_blank" href="https://drive.google.com/file/d/1hNbUE7Kbbd5Ic58dasNNoj7obdA8wqI0/view?usp=sharing"><i class="fa fa-file-pdf fa-lg"></i></a></p>
-            </div>
-
-        </div>
-    </div>
-
-    <div class="publication" style="margin-bottom: 3rem;">
-        <img src="images/pub5.png" alt="Gorilla and human avatars.">
-        <div>
-            <p> <span style="color:crimson">🏅Honorable Mention for Best Paper Award at IEEE ISMAR 2025 (Top 3%)</span></p>
-            <p> <strong>Impact of Avatar-Locomotion Congruence on User Experience and Identification in Virtual Reality</strong></p>
-            <p> <span>Omar Khan</span>, Hyeongil Nam, Kangsoo Kim</p>
-            <p>IEEE Transactions on Visualization and Computer Graphics (TVCG), vol. 31, no. 11, pp. 9878–9888, 2025.</p>
-            <div style="display: flexbox; margin-bottom: 0.5rem;"> <p class="bubble">Acceptance rate: 8%</p> <p class="bubble" style="background-color:var(--light1)">Impact Factor: 6.8</p></div>
-            <div style="display: flex; flex-direction: row; gap: 1rem;">
-                <p><a target="_blank" href="https://doi.org/10.1109/TVCG.2025.3616836"><i class="ai ai-doi ai-lg"></i></a></p>
-                <p><a target="_blank" href="https://drive.google.com/file/d/1GlnWauti1czOlE-_OZULPrCjBzcbMRNg/view?usp=sharing"><i class="fa fa-file-pdf fa-lg"></i></a></p>
-                <p><a target="_blank" href="https://youtu.be/rNgd_NXCkUs"><i class="fa fa-file-video fa-lg"></i></a></p>
-                <p><a target="_blank" href="ismar_honorable_mention.pdf"><i class="fa fa-award fa-lg"></i></a></p>
-            </div>
-
-        </div>
-    </div>
-
-    <hr>
-    
-
-    <h2>Extended Abstracts and Workshop Papers</h2>
-
-    <div class="publication" style="padding-bottom: 3rem">
-        <img src="images/pub9.png" alt="Non-human avatars with various body parts labeled, along with the frequencies reported in our survey.">
-        <div>
-            <p><span style="color:crimson">New!</span> &nbsp; <strong>Non-Human Body Parts in Social VR: A Survey of Furry and Kemonomimi Communities</strong></p>
-            <p><span>Omar A. Khan</span>, Lee Lisle, Tiffany D. Do</p>
-            <p>Proceedings of the ACM Symposium on Spatial User Interaction (SUI), 2026.</p>
-            <div style="display: flexbox; margin-bottom: 0.5rem;"> <p class="bubble">Acceptance rate: TBA</p></div>
-            <div style="display: flex; flex-direction: row; gap: 1rem;">
-                <p><a target="_blank" href="https://doi.org/10.1145/3822518.3839315"><i class="ai ai-doi ai-lg"></i></a></p>
-                <p><a target="_blank" href="https://drive.google.com/file/d/1is9tRo6McofKu7WY8pM6R0F0PSgx9nA9/view?usp=sharing"><i class="fa fa-file-pdf ai-lg"></i></a></p>
-            </div>
-         </div>
-    </div>
-
-    <div class="publication" style="padding-bottom: 3rem">
-        <img src="images/pub7.png" alt="Excerpt of our system and study conditions.">
-        <div>
-            <p><strong>Exploring Experiential Differences Between Virtual and Physical Memory-Linked Objects in Extended Reality</strong></p>
-            <p>Zaid Ahmed, <span>Omar A. Khan</span>, Hyeongil Nam, Kangsoo Kim</p>
-            <p>Proceedings of ACM CHI Conference Extended Abstracts on Human Factors in Computing Systems (CHI EA), no. 269, pp. 1-5, 2026.</p>
-            <div style="display: flexbox; margin-bottom: 0.5rem;"> <p class="bubble">Acceptance rate: 38%</p> <p class="bubble" style="background-color:var(--light2)">ICORE conf. rank: A*</p></div>
-            <div style="display: flex; flex-direction: row; gap: 1rem;">
-                <p><a target="_blank" href="https://doi.org/10.1145/3772363.3798977"><i class="ai ai-doi ai-lg"></i></a></p>
-                <p><a target="_blank" href="https://arxiv.org/pdf/2603.21381"><i class="fa fa-file-pdf ai-lg"></i></a></p>
-            </div>
-         </div>
-    </div>
-
-    <div class="publication" style="padding-bottom: 3rem">
-        <img src="images/pub4.png" alt="An illustration depicting our concept of TangibleMoments: the user uses a sticker to embed an XR memory of playing a video game on the controller, then re-experiences the memory at a later time.">
-        <div>
-            <p> <strong>TangibleMoments: Embedding XR Memories onto Physical Objects</strong></p>
-            <p> <span>Omar Khan</span>, Zaid Ahmed, Hyeongil Nam, Kangsoo Kim</p>
-            <p>Proceedings of the IEEE Conference on Virtual Reality and 3D User Interfaces Abstracts and Workshops (IEEE VRW): 1st International Workshop on Spatial Memory in XR (XRMemory), pp. 1147–1153, 2025.</p>
-            <div style="display: flex; flex-direction: row; gap: 1rem;">
-                <p><a target="_blank" href="https://doi.org/10.1109/VRW66409.2025.00227"><i class="ai ai-doi ai-lg"></i></a></p>
-                <p><a target="_blank" href="https://drive.google.com/file/d/13QEskG6ehajRU-Mg5Z54B2-2tXvXAhLh/view"><i class="fa fa-file-pdf fa-lg"></i></a></p>
-                <p><a target="_blank" href="https://github.com/omarkhan03/TangibleMoments"><i class="fa fa-code fa-lg"></i></a></p>
             </div>
         </div>
-    </div>
 
-    <div class="publication" style="padding-bottom: 3rem">
-        <img src="images/pub3.png" alt="A symbol-based guide cue and virtual human guide cue.">
-        <div>
-            <p> <strong>Investigating Visual Guide Cues in VR: Impacts of Virtual Humans and Symbol-Based Navigation on Real-World Performance and Experience</strong></p>
-            <p> <span>Omar Khan</span>, Anh Nguyen, Hyeongil Nam, Kangsoo Kim</p>
-            <p>Proceedings of the IEEE Conference on Virtual Reality and 3D User Interfaces Abstracts and Workshops (IEEE VRW): 1st International Workshop on Real and Virtual Spaces Influences (ReViSI), pp. 504–509, 2025.</p>
-            <div style="display: flex; flex-direction: row; gap: 1rem;">
-                <p><a target="_blank" href="https://doi.org/10.1109/VRW66409.2025.00110"><i class="ai ai-doi ai-lg"></i></a></p>
-                <p><a target="_blank" href="https://drive.google.com/file/d/1FCVyr8fN9mmLohT2jmduDQYVBMDb1mK2/view"><i class="fa fa-file-pdf fa-lg"></i></a></p>
+        <div class="publication">
+            <img src="images/pub8.png" alt="Avatars of various levels of body weight, body completeness, and clothing.">
+            <div class="publication-content">
+                <p><strong>Influence of Avatar Appearance and Target Distance on Locomotion Method Selection in Virtual Reality</strong></p>
+                <p> <span>Omar A. Khan</span>, Junyeong Kum, Hyeongil Nam, Myungho Lee, Kangsoo Kim</p>
+                <p>IEEE Transactions on Visualization and Computer Graphics (TVCG), vol. 32, no. 5, pp. 4668-4677, 2026.</p>
+                <div class="badges"> <p class="bubble">Acceptance rate: 20%</p> <p class="bubble bubble--impact">Impact Factor: 6.8</p></div>
+                <div class="publication-links">
+                    <p><a target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1109/TVCG.2026.3679092"><i class="ai ai-doi ai-lg"></i></a></p>
+                    <p><a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1hNbUE7Kbbd5Ic58dasNNoj7obdA8wqI0/view?usp=sharing"><i class="fa fa-file-pdf fa-lg"></i></a></p>
+                </div>
+
             </div>
         </div>
-    </div>
 
-    <div class="publication" style="padding-bottom: 3rem">
-        <img src="images/pub2.png" alt="Four avatar-locomotion combinations.">
-        <div>
-            <p> <strong>“I look like a gorilla, but don’t move like one!”: Impact of Avatar-Locomotion Congruence in Virtual Reality</strong></p>
-            <p> <span>Omar Khan</span>, Hyeongil Nam, Kangsoo Kim</p>
-            <p>Proceedings of the IEEE Conference on Virtual Reality and 3D User Interfaces Abstracts and Workshops (IEEE VRW), pp. 1202–1203, 2025.</p>
-            <div style="display: flex; flex-direction: row; gap: 1rem;">
-                <p><a target="_blank" href="https://doi.org/10.1109/VRW66409.2025.00247"><i class="ai ai-doi ai-lg"></i></a></p>
-                <p><a target="_blank" href="https://drive.google.com/file/d/1Gb1vvffztfzi6TTpUkrMlKC9w7DK1SA3/view"><i class="fa fa-file-pdf fa-lg"></i></a></p>
-                <p><a target="_blank" href="https://drive.google.com/file/d/1iCRCPg813HfMm24O4rXgTSB5goE7Yp9m/view?usp=sharing"><i class="fa fa-file-image fa-lg"></i></a></p>
+        <div class="publication">
+            <img src="images/pub7.png" alt="Gorilla and human avatars.">
+            <div class="publication-content">
+                <p> <span class="status status--award">🏅Honorable Mention for Best Paper Award at IEEE ISMAR 2025 (Top 3%)</span></p>
+                <p> <strong>Impact of Avatar-Locomotion Congruence on User Experience and Identification in Virtual Reality</strong></p>
+                <p> <span>Omar Khan</span>, Hyeongil Nam, Kangsoo Kim</p>
+                <p>IEEE Transactions on Visualization and Computer Graphics (TVCG), vol. 31, no. 11, pp. 9878–9888, 2025.</p>
+                <div class="badges"> <p class="bubble">Acceptance rate: 8%</p> <p class="bubble bubble--impact">Impact Factor: 6.8</p></div>
+                <div class="publication-links">
+                    <p><a target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1109/TVCG.2025.3616836"><i class="ai ai-doi ai-lg"></i></a></p>
+                    <p><a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1GlnWauti1czOlE-_OZULPrCjBzcbMRNg/view?usp=sharing"><i class="fa fa-file-pdf fa-lg"></i></a></p>
+                    <p><a target="_blank" rel="noopener noreferrer" href="https://youtu.be/rNgd_NXCkUs"><i class="fa fa-file-video fa-lg"></i></a></p>
+                    <p><a target="_blank" rel="noopener noreferrer" href="ismar_honorable_mention.pdf"><i class="fa fa-award fa-lg"></i></a></p>
+                </div>
+
             </div>
         </div>
-    </div>
 
-    <div class="publication">
-        <img src="images/pub1.png" alt="Virtual Human and Symbol-based Guide Cue in a digitally reconstructed campus building.">
-        <div>
-            <p> <strong>Exploring the Impact of Virtual Human and Symbol-Based Guide Cues in Immersive VR on Real-World Navigation Experience</strong></p>
-            <p> <span>Omar Khan</span>, Anh Nguyen, Michael Francis, Kangsoo Kim</p>
-            <p>Proceedings of the IEEE Conference on Virtual Reality and 3D User Interfaces Abstracts and Workshops (IEEE VRW), pp. 883–884, 2024.</p>
-            <div style="display: flex; flex-direction: row; gap: 1rem;">
-                <!-- <p>Links: </p> -->
-                <p><a target="_blank" href="https://doi.org/10.1109/VRW62533.2024.00238"><i class="ai ai-doi ai-lg"></i></a></p>
-                <p><a target="_blank" href="https://drive.google.com/file/d/1cl3fTedWdF_ZQyavknzEsZh9MPeV8IZd/view?usp=sharing"><i class="fa fa-file-pdf fa-lg"></i></a></p>
-                <p><a target="_blank" href="https://drive.google.com/file/d/1Vh5O5gXrE-Ze1EVHqqPCEZRUjdXBKE7G/view?usp=sharing"><i class="fa fa-file-image fa-lg"></i></a></p>
+        <hr>
+
+        <h2>Extended Abstracts and Workshop Papers</h2>
+
+        <div class="publication">
+            <img src="images/pub6.png" alt="Non-human avatars with various body parts labeled, along with the frequencies reported in our survey.">
+            <div class="publication-content">
+                <p><span class="status status--new">New!</span>   <strong>Non-Human Body Parts in Social VR: A Survey of Furry and Kemonomimi Communities</strong></p>
+                <p><span>Omar A. Khan</span>, Lee Lisle, Tiffany D. Do</p>
+                <p>Proceedings of the ACM Symposium on Spatial User Interaction (SUI), 2026.</p>
+                <div class="badges"> <p class="bubble">Acceptance rate: TBA</p></div>
+                <div class="publication-links">
+                    <p><a target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1145/3822518.3839315"><i class="ai ai-doi ai-lg"></i></a></p>
+                    <p><a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1is9tRo6McofKu7WY8pM6R0F0PSgx9nA9/view?usp=sharing"><i class="fa fa-file-pdf ai-lg"></i></a></p>
+                </div>
+             </div>
+        </div>
+
+        <div class="publication">
+            <img src="images/pub5.png" alt="Excerpt of our system and study conditions.">
+            <div class="publication-content">
+                <p><strong>Exploring Experiential Differences Between Virtual and Physical Memory-Linked Objects in Extended Reality</strong></p>
+                <p>Zaid Ahmed, <span>Omar A. Khan</span>, Hyeongil Nam, Kangsoo Kim</p>
+                <p>Proceedings of ACM CHI Conference Extended Abstracts on Human Factors in Computing Systems (CHI EA), no. 269, pp. 1-5, 2026.</p>
+                <div class="badges"> <p class="bubble">Acceptance rate: 38%</p> <p class="bubble bubble--rank">ICORE conf. rank: A*</p></div>
+                <div class="publication-links">
+                    <p><a target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1145/3772363.3798977"><i class="ai ai-doi ai-lg"></i></a></p>
+                    <p><a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2603.21381" aria-label="arXiv" title="arXiv"><i class="ai ai-arxiv ai-lg" aria-hidden="true"></i></a></p>
+                </div>
+             </div>
+        </div>
+
+        <div class="publication">
+            <img src="images/pub4.png" alt="An illustration depicting our concept of TangibleMoments: the user uses a sticker to embed an XR memory of playing a video game on the controller, then re-experiences the memory at a later time.">
+            <div class="publication-content">
+                <p> <strong>TangibleMoments: Embedding XR Memories onto Physical Objects</strong></p>
+                <p> <span>Omar Khan</span>, Zaid Ahmed, Hyeongil Nam, Kangsoo Kim</p>
+                <p>Proceedings of the IEEE Conference on Virtual Reality and 3D User Interfaces Abstracts and Workshops (IEEE VRW), pp. 1147–1153, 2025.</p>
+                <div class="publication-links">
+                    <p><a target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1109/VRW66409.2025.00227"><i class="ai ai-doi ai-lg"></i></a></p>
+                    <p><a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/13QEskG6ehajRU-Mg5Z54B2-2tXvXAhLh/view"><i class="fa fa-file-pdf fa-lg"></i></a></p>
+                    <p><a target="_blank" rel="noopener noreferrer" href="https://github.com/omarkhan03/TangibleMoments"><i class="fa fa-code fa-lg"></i></a></p>
+                </div>
             </div>
         </div>
-    </div>
 
-    <hr>
+        <div class="publication">
+            <img src="images/pub3.png" alt="A symbol-based guide cue and virtual human guide cue.">
+            <div class="publication-content">
+                <p> <strong>Impacts of Virtual Humans and Symbol-Based Navigation on Real-World Performance and Experience</strong></p>
+                <p> <span>Omar Khan</span>, Anh Nguyen, Hyeongil Nam, Kangsoo Kim</p>
+                <p>Proceedings of the IEEE Conference on Virtual Reality and 3D User Interfaces Abstracts and Workshops (IEEE VRW), pp. 504–509, 2025.</p>
+                <div class="publication-links">
+                    <p><a target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1109/VRW66409.2025.00110"><i class="ai ai-doi ai-lg"></i></a></p>
+                    <p><a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1FCVyr8fN9mmLohT2jmduDQYVBMDb1mK2/view"><i class="fa fa-file-pdf fa-lg"></i></a></p>
+                </div>
+            </div>
+        </div>
 
-    <h2>Academic Service</h2>
+        <div class="publication">
+            <img src="images/pub2.png" alt="Four avatar-locomotion combinations.">
+            <div class="publication-content">
+                <p> <strong>“I look like a gorilla, but don’t move like one!”: Impact of Avatar-Locomotion Congruence in Virtual Reality</strong></p>
+                <p> <span>Omar Khan</span>, Hyeongil Nam, Kangsoo Kim</p>
+                <p>Proceedings of the IEEE Conference on Virtual Reality and 3D User Interfaces Abstracts and Workshops (IEEE VRW), pp. 1202–1203, 2025.</p>
+                <div class="publication-links">
+                    <p><a target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1109/VRW66409.2025.00247"><i class="ai ai-doi ai-lg"></i></a></p>
+                    <p><a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1Gb1vvffztfzi6TTpUkrMlKC9w7DK1SA3/view"><i class="fa fa-file-pdf fa-lg"></i></a></p>
+                    <p><a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1iCRCPg813HfMm24O4rXgTSB5goE7Yp9m/view?usp=sharing"><i class="fa fa-file-image fa-lg"></i></a></p>
+                </div>
+            </div>
+        </div>
 
-    <ul>
-        <li>External reviewer for ACM VRST 2025-26 and IEEE ISMAR 2026.</li>
-        <li>Student volunteer at IEEE ISMAR 2025.</li>
-        <li>Event coordinator for the Doctoral Student Association of Drexel College of Computing and Informatics, 2026-27.</li>
-    </ul>
-    <p></p>
+        <div class="publication">
+            <img src="images/pub1.png" alt="Virtual Human and Symbol-based Guide Cue in a digitally reconstructed campus building.">
+            <div class="publication-content">
+                <p> <strong>Exploring the Impact of Virtual Human and Symbol-Based Guide Cues in Immersive VR on Real-World Navigation Experience</strong></p>
+                <p> <span>Omar Khan</span>, Anh Nguyen, Michael Francis, Kangsoo Kim</p>
+                <p>Proceedings of the IEEE Conference on Virtual Reality and 3D User Interfaces Abstracts and Workshops (IEEE VRW), pp. 883–884, 2024.</p>
+                <div class="publication-links">
+    <p><a target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1109/VRW62533.2024.00238"><i class="ai ai-doi ai-lg"></i></a></p>
+                    <p><a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1cl3fTedWdF_ZQyavknzEsZh9MPeV8IZd/view?usp=sharing"><i class="fa fa-file-pdf fa-lg"></i></a></p>
+                    <p><a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1Vh5O5gXrE-Ze1EVHqqPCEZRUjdXBKE7G/view?usp=sharing"><i class="fa fa-file-image fa-lg"></i></a></p>
+                </div>
+            </div>
+        </div>
 
+        <hr>
 
-    <hr>
+        <h2>Academic Service</h2>
 
-    <h2>Facts</h2>
-    <ul>
-        <li>I am Canadian. I was born and raised in Mississauga, but spent my high-school and college years in Calgary. 🍁</li>
-        <li>I love gaming. My favorite video games are Elden Ring, Undertale, and Outer Wilds. 🪐</li>
-    </ul>
+        <ul>
+            <li>External reviewer for ACM VRST 2025-26 and IEEE ISMAR 2026.</li>
+            <li>Student volunteer at IEEE ISMAR 2025.</li>
+            <li>Event coordinator for the Doctoral Student Association of Drexel College of Computing and Informatics, 2026-27.</li>
+        </ul>
 
-    <hr>
+        <hr>
+
+        <h2>Facts</h2>
+        <ul>
+            <li>I am Canadian. I was born and raised in Mississauga, but spent my high-school and college years in Calgary. 🍁</li>
+            <li>I love gaming. My favorite video games are Elden Ring, Deltarune, and Outer Wilds. 🪐</li>
+        </ul>
+
+        <hr>
+    </main>
+
     <footer>Last updated in August 2026</footer>
-</body>
 
+    <script>
+        const copyEmailButton = document.querySelector('.copy-email');
+
+        copyEmailButton.addEventListener('click', async () => {
+            const email = copyEmailButton.dataset.email;
+            const originalText = copyEmailButton.textContent;
+
+            try {
+                await navigator.clipboard.writeText(email);
+            } catch {
+                const textarea = document.createElement('textarea');
+                textarea.value = email;
+                textarea.setAttribute('readonly', '');
+                textarea.style.position = 'fixed';
+                textarea.style.opacity = '0';
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                textarea.remove();
+            }
+
+            copyEmailButton.textContent = 'copied!';
+            window.setTimeout(() => {
+                copyEmailButton.textContent = originalText;
+            }, 1600);
+        });
+    </script>
+</body>
 </html>

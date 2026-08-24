@@ -1,0 +1,268 @@
+:root {
+  --base: #000000;
+  --highlight: #3118be;
+  --light0: #dcd7ff;
+  --light1: #ffcece;
+  --light2: #ffdcbd;
+  --new: #0b6b63;
+  --award: #8a5a00;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 auto;
+  padding: 1rem;
+  max-width: 1200px;
+  background: #ffffff;
+  color: var(--base);
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5;
+}
+
+/* Keep the intro side-by-side on larger screens, but otherwise close to the
+   simple layout of the original site. */
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.pfp {
+  display: block;
+  width: 11rem;
+  max-width: 32vw;
+  height: auto;
+  flex: 0 0 auto;
+  border-radius: 0;
+}
+
+.hero-content {
+  min-width: 0;
+}
+
+.hero-content h1 {
+  margin: 0;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.subtitle {
+  margin: 0.45rem 0 0.8rem;
+  font-size: 1.15rem;
+  color: var(--base);
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.social-links a {
+  color: var(--base);
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+
+.social-links a:hover,
+.social-links a:focus-visible {
+  color: var(--highlight);
+}
+
+.copy-email {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.35rem 0.65rem;
+  border: 1px solid var(--base);
+  border-radius: 0;
+  background: #ffffff;
+  color: var(--base);
+  font: inherit;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.copy-email:hover,
+.copy-email:focus-visible {
+  color: var(--highlight);
+  border-color: var(--highlight);
+}
+
+h2 {
+  margin: 0 0 1rem;
+  font-size: 1.2rem;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+a {
+  color: var(--highlight);
+  font-weight: bold;
+}
+
+hr {
+  margin: 2rem 0;
+  border: 0;
+  border-top: 1px solid var(--base);
+}
+
+ul {
+  padding-left: 1.5rem;
+}
+
+/* Publications retain the clean reusable structure, while visually matching
+   the tighter, flatter layout of the original page. */
+.publication {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.publication > img {
+  display: block;
+  width: 10rem;
+  max-width: 10rem;
+  height: auto;
+  flex: 0 0 10rem;
+  border: 0;
+  border-radius: 0 !important;
+  clip-path: none !important;
+  -webkit-clip-path: none !important;
+  mask: none !important;
+  -webkit-mask: none !important;
+}
+
+.publication-content {
+  min-width: 0;
+}
+
+.publication-content > p {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.publication-content span:not(.status) {
+  color: var(--highlight);
+  font-weight: bolder;
+  font-style: normal;
+}
+
+/* Status labels: visible, but still lightweight enough for an academic site. */
+.status {
+  display: inline-block;
+  font-weight: 700;
+  font-style: normal;
+  padding: 0.1rem 0.4rem;
+  border-radius: 0.25rem;
+}
+
+.status--new {
+  color: #0b6b63;
+  background: #e9f8f5;
+  border: 1px solid #b9e6df;
+}
+
+.status--award {
+  color: #8a5a00;
+  background: #fff6d8;
+  border: 1px solid #ead28a;
+}
+
+.badges,
+.publication-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.badges {
+  gap: 0.35rem;
+  margin: 0.5rem 0;
+}
+
+.bubble {
+  display: inline-block;
+  margin: 0;
+  padding: 0.2rem 0.5rem;
+  border-radius: 1rem;
+  background: var(--light0);
+  color: #000;
+  font-size: smaller;
+  font-weight: bold;
+}
+
+.bubble--impact {
+  background: var(--light1);
+}
+
+.bubble--rank {
+  background: var(--light2);
+}
+
+.publication-links {
+  gap: 1rem;
+  margin-top: 0.25rem;
+}
+
+.publication-links p {
+  margin: 0;
+}
+
+.publication-links a {
+  color: var(--base);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.publication-links a:hover,
+.publication-links a:focus-visible {
+  color: var(--highlight);
+}
+
+footer {
+  margin-top: 3rem;
+  font-size: x-small;
+}
+
+:focus-visible {
+  outline: 2px solid var(--highlight);
+  outline-offset: 2px;
+}
+
+@media (max-width: 700px) {
+  body {
+    font-size: smaller;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .pfp {
+    width: 12rem;
+    max-width: 100%;
+  }
+
+  .publication {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .publication > img {
+    width: 10rem;
+    max-width: 100%;
+    flex-basis: auto;
+  }
+}
