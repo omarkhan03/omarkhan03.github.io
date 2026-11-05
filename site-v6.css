@@ -117,11 +117,21 @@ ul {
   border-color: var(--highlight);
 }
 
-/* Timeline */
+/* Timeline. Mobile browsers hide the scrollbar, so a border frames the box,
+   and edge shadows appear only on the sides that have more content. */
 .timeline {
   max-height: 150px;
   overflow-y: auto;
-  padding-right: 12px;
+  padding: 0 12px 0 0;
+  border: 1px solid #dddddd;
+  background:
+    linear-gradient(#ffffff 30%, rgb(255 255 255 / 0%)) center top,
+    linear-gradient(rgb(255 255 255 / 0%), #ffffff 70%) center bottom,
+    radial-gradient(farthest-side at 50% 0, rgb(0 0 0 / 20%), transparent) center top,
+    radial-gradient(farthest-side at 50% 100%, rgb(0 0 0 / 20%), transparent) center bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+  background-attachment: local, local, scroll, scroll;
 }
 
 /* Publications */
